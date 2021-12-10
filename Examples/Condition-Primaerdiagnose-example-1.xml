@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <id value="Condition-Primaerdiagnose-example-1"/>
+    <meta>
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose "
+        />
+    </meta>
+    <!-- @TODO Specimen, URL -->
+    <extension url="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen">
+        <valueReference>
+            <reference value="Specimen/Specimen-Specimen-example-1"/>
+        </valueReference>
+    </extension>
+
+    <extension url="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Fernmetastasen">
+        <valueReference>
+            <reference value="Observation/Observation-Fernmetastasen-example-1"/>
+        </valueReference>
+    </extension>
+    
+    <code>
+        <coding>
+            <system value="http://fhir.de/CodeSystem/dimdi/icd-10-gm"/>
+            <version value="2019"/>
+            <code value="C61"/>
+        </coding>
+    </code>
+    <bodySite>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.6.43.1"/>
+            <version value="31"/>
+            <code value="C61.9"/>
+        </coding>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.6.60.7.1.1"/>
+            <code value="L"/>
+            </coding>
+        </bodySite>
+    <subject>
+        <reference value="Patient/Patient-Patient-example-1"/>
+    </subject>
+    <encounter>
+        <reference value="Encounter/Encounter-Fall-example-1"/>
+    </encounter>
+    <!-- @ TODO onsetAge ggf. entfernen-->
+    <!-- 
+    <onsetAge>
+        <value value="55"/>
+        <unit value="Jahre"/>
+        <system value="http://unitsofmeasure.org/"/>
+        <code value="a"/>
+    </onsetAge>
+     -->
+    
+    <onsetDateTime value="2016-02-01" />
+   
+    <stage>
+        <assessment>
+            <!-- @todo -->
+            <reference value="Observation/Observation-TNMc-example-1"/>
+        </assessment>
+        </stage>
+    <evidence>
+        <detail>
+            <reference value="Observation/Observation-Histologie-example-1"/>
+        </detail>
+    </evidence>
+</Condition>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Verlauf-Tumorstatus-Fernmetastasen CodeSystem</b>
+            </p>
+            <p>Verlauf Tumorstatus Fernmetastasen</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/VerlaufTumorstatusFernmetastasenCS"/>
+    <version value="0.9.0" />
+    <name value="VerlaufTumorstatusFernmetastasenCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Verlauf Tumorstatus Fernmetastasen"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="9"/>
+    <concept>
+        <code value="K"/>
+        <display value="Keine Fernmetastasen nachweisbar"/>
+    </concept>
+    <concept>
+        <code value="M"/>
+        <display value="Verbliebene Fernmetastase(n)"/>
+    </concept>
+    <concept>
+        <code value="R"/>
+        <display value="Neu aufgetretene Fernmetastase(n) bzw. Metastasenrezidiv"/>
+    </concept>
+    <concept>
+        <code value="T"/>
+        <display value="Fernmetastasen Residuen"/>
+    </concept>
+    <concept>
+        <code value="P"/>
+        <display value="Fernmetastasen Progress"/>
+    </concept>
+    <concept>
+        <code value="N"/>
+        <display value="Fernmetastasen No Change"/>
+    </concept>
+    <concept>
+        <code value="F"/>
+        <display value="Fraglicher Befund"/>
+    </concept>
+    <concept>
+        <code value="U"/>
+        <display value="Unbekannt"/>
+    </concept>
+    <concept>
+        <code value="X"/>
+        <display value="Fehlende Angabe"/>
+    </concept>
+</CodeSystem>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id value="Organization-Organisation-example-1"/>
+    <meta>
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Organization-Organisation"/>
+    </meta>
+        <name value="Musterkrankenhaus" />
+    </Organization>

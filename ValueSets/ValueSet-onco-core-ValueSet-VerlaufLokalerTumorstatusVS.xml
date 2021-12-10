@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Verlauf-Lokaler-Tumorstatus ValueSet</b>
+            </p>
+            <p>Verlauf lokaler Tumorstatus</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/VerlaufLokalerTumorstatusVS"/>
+    <version value="0.9.0" />
+    <name value="VerlaufLokalerTumorstatusVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Verlauf lokaler Tumorstatus"/>
+    <compose>
+        <include>
+            <system
+                value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/VerlaufLokalerTumorstatusCS"/>
+            <concept>
+                <code value="K"/>
+                <display value="Kein Tumor nachweisbar"/>
+            </concept>
+            <concept>
+                <code value="T"/>
+                <display value="Tumorreste (Residualtumor)"/>
+            </concept>
+            <concept>
+                <code value="P"/>
+                <display value="Tumorreste Residualtumor Progress"/>
+            </concept>
+            <concept>
+                <code value="N"/>
+                <display value="Tumorreste Residualtumor No Change"/>
+            </concept>
+            <concept>
+                <code value="R"/>
+                <display value="Lokalrezidiv"/>
+            </concept>
+            <concept>
+                <code value="F"/>
+                <display value="Fraglicher Befund"/>
+            </concept>
+            <concept>
+                <code value="U"/>
+                <display value="unbekannt"/>
+            </concept>
+            <concept>
+                <code value="X"/>
+                <display value="Fehlende Angabe"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>FM-Lokalisation ValueSet</b>
+            </p>
+            <p>Lokalisation von Fernmetastasen</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/FMLokalisationVS"/>
+    <version value="0.9.0" />
+    <name value="FMLokalisationVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Lokalisation von Fernmetastasen"/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/FMLokalisationCS"/>
+            <concept>
+                <code value="PUL"/>
+                <display value="Lunge"/>
+            </concept>
+            <concept>
+                <code value="OSS"/>
+                <display value="Knochen"/>
+            </concept>
+            <concept>
+                <code value="HEP"/>
+                <display value="Leber"/>
+            </concept>
+            <concept>
+                <code value="BRA"/>
+                <display value="Hirn"/>
+            </concept>
+            <concept>
+                <code value="LYM"/>
+                <display value="Lymphknoten"/>
+            </concept>
+            <concept>
+                <code value="MAR"/>
+                <display value="Knochenmark"/>
+            </concept>
+            <concept>
+                <code value="PLE"/>
+                <display value="Pleura"/>
+            </concept>
+            <concept>
+                <code value="PER"/>
+                <display value="Peritoneum"/>
+            </concept>
+            <concept>
+                <code value="ADR"/>
+                <display value="Nebennieren"/>
+            </concept>
+            <concept>
+                <code value="SKI"/>
+                <display value="Haut"/>
+            </concept>
+            <concept>
+                <code value="OTH"/>
+                <display value="Andere Organe"/>
+            </concept>
+            <concept>
+                <code value="GEN"/>
+                <display value="Generalisierte Metastasierung"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

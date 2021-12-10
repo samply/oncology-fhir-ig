@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hl7.org/fhir"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <id value="Observation-TNMc-example-1"/>
+    <meta>
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMc"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="21908-9"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/Patient-Patient-example-1"/>
+    </subject>
+    <encounter>
+        <reference value="Encounter/Encounter-Fall-example-1"/>
+    </encounter>
+    <effectiveDateTime value="2018-01-01"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS"/>
+            <version value="8"/>
+            <code value="IIIA"/>
+        </coding>
+    </valueCodeableConcept>
+
+    <component>
+        <extension
+            url="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix">
+            <valueCodeableConcept>
+                <coding>
+                    <code value="c"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="21905-5"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS"/>
+                <version value="8"/>
+                <code value="IIIA"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <extension
+            url="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix">
+            <valueCodeableConcept>
+                <coding>
+                    <code value="c"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="201906-3"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMNCS"/>
+                <code value="0(i+)"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="21907-1"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMMCS"/>
+                <code value="1b"/>
+            </coding>
+        </valueCodeableConcept>
+        <extension
+            url="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix">
+            <valueCodeableConcept>
+                <coding>
+                    <code value="c"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="59479-6"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMySymbolCS"/>
+                <code value="y"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="21983-2"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMrSymbolCS"/>
+                <code value="r"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="42030-7"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <code value="m"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+</Observation>

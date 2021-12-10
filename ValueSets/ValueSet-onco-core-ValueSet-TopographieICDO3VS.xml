@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Topographie ICD-O-3 ValueSet</b>
+            </p>
+            <p>Topographie ICD-O-3 Codes</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TopographieICDO3VS"/>
+    <version value="0.9.0" />
+    <name value="TopographieICDO3VS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Topographie ICD-O-3 Codes"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.6.43.1"/>
+            <filter>
+                <property value="code"/>
+                <op value="regex"/>
+                <value value="C\d\d\.\d(\d)?"/>
+            </filter>
+        </include>
+    </compose>
+</ValueSet>

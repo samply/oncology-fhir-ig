@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Specimen xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ 
+  <id value="Specimen-Specimen-example-1" />
+  <meta>
+    <profile value="https://fhir.bbmri.de/StructureDefinition/Specimen" />
+  </meta>
+
+  <extension url="https://fhir.bbmri.de/StructureDefinition/SampleDiagnosis">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://fhir.bbmri.de/CodeSystem/OtherSampleDiagnosis" />
+        <code value="unknown" />
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <type>
+    <coding>
+      <system value="https://fhir.bbmri.de/CodeSystem/SampleMaterialType" />
+      <code value="whole-blood" />
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/Patient-Patient-example-1" />
+  </subject>
+  <collection>
+    <collectedDateTime value="2005-06-17" />
+    <bodySite>
+      <coding>
+        <system value="urn:oid:1.3.6.1.4.1.19376.1.3.11.36" />
+        <code value="C26.8" />
+      </coding>
+    </bodySite>
+  </collection>
+</Specimen>

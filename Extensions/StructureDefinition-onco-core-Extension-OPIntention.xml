@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+  xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-OPIntention"/>
+  <version value="0.9.0" />
+  <name value="OPIntention"/>
+  <status value="active"/>
+  <description value="  Gibt an, mit welchem Ziel die Operation durchgeführt wird" />
+  <fhirVersion value="4.0.0"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Procedure"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri
+        value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-OPIntention"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/OPIntentionVS"/>
+      </binding>
+    </element>
+    <element id="Extension.value[x].coding.code">
+      <path value="Extension.value[x].coding.code"/>
+      <short value="Intention der Therapie"/>
+      <definition value="Gibt die Intention der Therapie an"/>
+      <min value="1"/>
+      <mapping>
+        <identity value="ADT-GEKID"/>
+        <map value="ST:ST_Intention, SYST:SYST_Intention"/>
+        <comment value="ST:ST_Intention, SYST:SYST_Intention"/>
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179"/>
+        <map value="urn:dktk:dataelement:67:2, urn:dktk:dataelement:69:2"/>
+        <comment value="urn:dktk:dataelement:67:2, urn:dktk:dataelement:69:2"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

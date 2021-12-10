@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>uicc-stadium CodeSystem</b>
+            </p>
+            <p>UICC Stadium</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/UiccstadiumCS"/>
+    <version value="0.9.0" />
+    <name value="UiccstadiumCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="UICC Stadium"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="28"/>
+    <concept>
+        <code value="0"/>
+        <display value="0"/>
+    </concept>
+    <concept>
+        <code value="0a"/>
+        <display value="0a"/>
+    </concept>
+    <concept>
+        <code value="0is"/>
+        <display value="0is"/>
+    </concept>
+    <concept>
+        <code value="I"/>
+        <display value="I"/>
+    </concept>
+    <concept>
+        <code value="IA"/>
+        <display value="IA"/>
+    </concept>
+    <concept>
+        <code value="IA1"/>
+        <display value="IA1"/>
+    </concept>
+    <concept>
+        <code value="IA2"/>
+        <display value="IA2"/>
+    </concept>
+    <concept>
+        <code value="IB"/>
+        <display value="IB"/>
+    </concept>
+    <concept>
+        <code value="IB1"/>
+        <display value="IB1"/>
+    </concept>
+    <concept>
+        <code value="IB2"/>
+        <display value="IB2"/>
+    </concept>
+    <concept>
+        <code value="IC"/>
+        <display value="IC"/>
+    </concept>
+    <concept>
+        <code value="II"/>
+        <display value="II"/>
+    </concept>
+    <concept>
+        <code value="IIA"/>
+        <display value="IIA"/>
+    </concept>
+    <concept>
+        <code value="IIA1"/>
+        <display value="IIA1"/>
+    </concept>
+    <concept>
+        <code value="IIA2"/>
+        <display value="IIA2"/>
+    </concept>
+    <concept>
+        <code value="IIB"/>
+        <display value="IIB"/>
+    </concept>
+    <concept>
+        <code value="IIC"/>
+        <display value="IIC"/>
+    </concept>
+    <concept>
+        <code value="III"/>
+        <display value="III"/>
+    </concept>
+    <concept>
+        <code value="IIIA"/>
+        <display value="IIIA"/>
+    </concept>
+    <concept>
+        <code value="IIIB"/>
+        <display value="IIIB"/>
+    </concept>
+    <concept>
+        <code value="IIIC"/>
+        <display value="IIIC"/>
+    </concept>
+    <concept>
+        <code value="IIIC1"/>
+        <display value="IIIC1"/>
+    </concept>
+    <concept>
+        <code value="IIIC2"/>
+        <display value="IIIC2"/>
+    </concept>
+    <concept>
+        <code value="IV"/>
+        <display value="IV"/>
+    </concept>
+    <concept>
+        <code value="IVA"/>
+        <display value="IVA"/>
+    </concept>
+    <concept>
+        <code value="IVB"/>
+        <display value="IVB"/>
+    </concept>
+    <concept>
+        <code value="IVC"/>
+        <display value="IVC"/>
+    </concept>
+    <concept>
+        <code value="IS"/>
+        <display value="IS"/>
+    </concept>
+</CodeSystem>

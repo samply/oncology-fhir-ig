@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix" />
+  <version value="0.9.0" />
+  <name value="TNMcpuPraefix" />
+  <status value="active"/>
+  <description value="Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte. "/>
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="fhirpath" />
+    <expression value="Observation.component" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="c/p/u Praefix" />
+      <definition value="Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMcpuPraefixTVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM_c_p_u_Praefix_M, TNM:TNM_c_p_u_Praefix_N, TNM:TNM_c_p_u_Praefix_T" />
+        <comment value="TNM:TNM_c_p_u_Praefix_M, TNM:TNM_c_p_u_Praefix_N, TNM:TNM_c_p_u_Praefix_T" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:80:1, urn:dktk:dataelement:79:1, urn:dktk:dataelement:78:1" />
+        <comment value="urn:dktk:dataelement:80:1, urn:dktk:dataelement:79:1, urn:dktk:dataelement:78:1" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

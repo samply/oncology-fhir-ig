@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>TNM-r-Symbol CodeSystem</b>
+            </p>
+            <p>TNM r-Symbol</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMrSymbolCS"/>
+    <version value="0.9.0" />
+    <name value="TNMrSymbolCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="TNM r-Symbol"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="2"/>
+    <concept>
+        <code value="r"/>
+        <display value="Klassifikation erfolgte zur Beurteilung eines Rezidivs"/>
+    </concept>
+    <concept>
+        <code value="9"/>
+        <display value="native Klassifikation vor Eintreten eines Rezidivs"/>
+    </concept>
+</CodeSystem>

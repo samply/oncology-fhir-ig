@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>ICD-Version ValueSet</b>
+            </p>
+            <p>Version des ICD-10-GM</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/ICDVersionVS"/>
+    <version value="0.9.0" />
+    <name value="ICDVersionVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Version des ICD-10-GM"/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/ICDVersionCS"/>
+            <concept>
+                <code value="2004"/>
+                <display value="ICD 10 Version 2004 GM"/>
+            </concept>
+            <concept>
+                <code value="2005"/>
+                <display value="ICD 10 Version 2005 GM"/>
+            </concept>
+            <concept>
+                <code value="2006"/>
+                <display value="ICD 10 Version 2006 GM"/>
+            </concept>
+            <concept>
+                <code value="2007"/>
+                <display value="ICD 10 Version 2007 GM"/>
+            </concept>
+            <concept>
+                <code value="2008"/>
+                <display value="ICD 10 Version 2008 GM"/>
+            </concept>
+            <concept>
+                <code value="2009"/>
+                <display value="ICD 10 Version 2009 GM"/>
+            </concept>
+            <concept>
+                <code value="2010"/>
+                <display value="ICD 10 Version 2010 GM"/>
+            </concept>
+            <concept>
+                <code value="2011"/>
+                <display value="ICD 10 Version 2011 GM"/>
+            </concept>
+            <concept>
+                <code value="2012"/>
+                <display value="ICD 10 Version 2012 GM"/>
+            </concept>
+            <concept>
+                <code value="2013"/>
+                <display value="ICD 10 Version 2013 GM"/>
+            </concept>
+            <concept>
+                <code value="2014"/>
+                <display value="ICD 10 Version 2014 GM"/>
+            </concept>
+            <concept>
+                <code value="2015"/>
+                <display value="ICD 10 Version 2015 GM"/>
+            </concept>
+            <concept>
+                <code value="2016"/>
+                <display value="ICD 10 Version 2016 GM"/>
+            </concept>
+   <!-- 
+    <concept>
+        <code value="10 2016 WHO"/>
+        <display value="ICD 10 Version 2016 WHO"/>
+    </concept>
+
+    
+    <concept>
+                <code value="2017"/>
+                <display value="ICD 10 Version 2016 WHO"/>
+            </concept>
+  -->  
+            <concept>
+                <code value="2017"/>
+                <display value="ICD 10 Version 2017 GM"/>
+            </concept>
+            <concept>
+                <code value="2018"/>
+                <display value="ICD 10 Version 2018 GM"/>
+            </concept>
+            <concept>
+                <code value="2019"/>
+                <display value="ICD 10 Version 2019 GM"/>
+            </concept>
+            <concept>
+                <code value="2020"/>
+                <display value="ICD 10 Version 2020 GM"/>
+            </concept>
+            <concept>
+                <code value="Sonstige"/>
+                <display value="Falls andere bzw. ältere Versionen verwendet werden"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

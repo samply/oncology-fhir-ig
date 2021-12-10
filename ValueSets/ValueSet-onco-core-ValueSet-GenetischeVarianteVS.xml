@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>GenetischeVariante</b>
+            </p>
+            <p>GenetischeVariante</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/GenetischeVarianteVS"/>
+    <version value="0.9.0" />
+    <name value="GenetischeVarianteVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Genetische Variante"/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/GenetischeVarianteCS"/>
+            <concept>
+                <code value="M"/>
+                <display value="Mutation/positiv"/>
+            </concept>
+            <concept>
+                <code value="W"/>
+                <display value="Wildtyp/nicht mutiert/negativ"/>
+            </concept>
+            <concept>
+                <code value="P"/>
+                <display value="Polymorphismus"/>
+            </concept>
+            <concept>
+                <code value="S"/>
+                <display value="Sonstiges"/>
+            </concept>
+            <concept>
+                <code value="N"/>
+                <display value="nicht bestimmbar"/>
+            </concept>
+            <concept>
+                <code value="U"/>
+                <display value="unbekannt"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

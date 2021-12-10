@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>ICD-O-Version CodeSystem</b>
+            </p>
+            <p>ICD-O Version</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/ICDOVersionCS"/>
+    <version value="0.9.0" />
+    <name value="ICDOVersionCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="ICD-O-3 Version"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="3"/>
+    <concept>
+        <code value="31"/>
+        <display value="ICD-O3; 1. Auflage 2003"/>
+    </concept>
+    <concept>
+        <code value="32"/>
+        <display value="ICD-O3, 2. Auflage 2013"/>
+    </concept>
+    <concept>
+        <code value="bb"/>
+        <display value="Neue Codes aus den WHO-Klassifikationen (BlueBooks)"/>
+    </concept>
+</CodeSystem>

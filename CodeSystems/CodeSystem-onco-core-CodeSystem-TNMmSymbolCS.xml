@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>TNM-m-Symbol CodeSystem</b>
+            </p>
+            <p>TNM m-Symbol</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMmSymbolCS"/>
+    <version value="0.9.0"/>
+    <name value="TNMmSymbolCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="TNM m-Symbol"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="9"/>
+    <concept>
+        <code value="m"/>
+        <display value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk"/>
+    </concept>
+    <concept>
+        <code value="2"/>
+        <display value="(2) simultaner Tumoren"/>
+    </concept>
+    <concept>
+        <code value="3"/>
+        <display value="(3) simultaner Tumoren"/>
+    </concept>
+    <concept>
+        <code value="4"/>
+        <display value="(4) simultaner Tumoren"/>
+    </concept>
+    <concept>
+        <code value="5"/>
+        <display value="(5) simultaner Tumoren"/>
+    </concept>
+    <concept>
+        <code value="6"/>
+        <display value="(6) simultaner Tumoren"/>
+    </concept>
+    <concept>
+        <code value="7"/>
+        <display value="(7) simultaner Tumoren"/>
+    </concept>
+    <concept>
+        <code value="8"/>
+        <display value="(8) simultaner Tumoren"/>
+    </concept>
+    <concept>
+        <code value="9"/>
+        <display value="(9) simultaner Tumoren"/>
+    </concept>
+</CodeSystem>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Gesamtbeurteilung-Tumorstatus CodeSystem</b>
+            </p>
+            <p>Gesamtbeurteilung Tumorstatus</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/GesamtbeurteilungTumorstatusCS"/>
+    <version value="0.9.0" />
+    <name value="GesamtbeurteilungTumorstatusCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Gesamtbeurteilung Tumorstatus"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="9"/>
+    <concept>
+        <code value="V"/>
+        <display value="Vollremission (complete remission, CR)"/>
+    </concept>
+    <concept>
+        <code value="T"/>
+        <display value="Teilremission / mindestens 50% Rückgang des Tumors (partial remission, PR)"
+        />
+    </concept>
+    <concept>
+        <code value="K"/>
+        <display value="Keine Änderung (no change, NC) = stable disease"/>
+    </concept>
+    <concept>
+        <code value="P"/>
+        <display value="Progression"/>
+    </concept>
+    <concept>
+        <code value="D"/>
+        <display value="Divergentes Geschehen"/>
+    </concept>
+    <concept>
+        <code value="B"/>
+        <display
+            value="Klinische Besserung des Zustandes, Kriterien für Teilremission jedoch nicht erfüllt (minimal response, MR)"
+        />
+    </concept>
+    <concept>
+        <code value="R"/>
+        <display value="Vollremission mit residualen Auffälligkeiten (CRr)"/>
+    </concept>
+    <concept>
+        <code value="U"/>
+        <display value="Beurteilung unmöglich"/>
+    </concept>
+    <concept>
+        <code value="X"/>
+        <display value="Fehlende Angabe"/>
+    </concept>
+</CodeSystem>

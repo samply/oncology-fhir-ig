@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>TNM-T CodeSystem</b>
+            </p>
+            <p>TNM T-Kategorie</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMTCS"/>
+    <version value="0.9.0" />
+    <name value="TNMTCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="TNM T-Kategorie"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="37"/>
+    <concept>
+        <code value="0"/>
+        <display value="0"/>
+    </concept>
+    <concept>
+        <code value="1"/>
+        <display value="1"/>
+    </concept>
+    <concept>
+        <code value="1a"/>
+        <display value="1a"/>
+    </concept>
+    <concept>
+        <code value="1a1"/>
+        <display value="1a1"/>
+    </concept>
+    <concept>
+        <code value="1a2"/>
+        <display value="1a2"/>
+    </concept>
+    <concept>
+        <code value="1b"/>
+        <display value="1b"/>
+    </concept>
+    <concept>
+        <code value="1b1"/>
+        <display value="1b1"/>
+    </concept>
+    <concept>
+        <code value="1b2"/>
+        <display value="1b2"/>
+    </concept>
+    <concept>
+        <code value="1c"/>
+        <display value="1c"/>
+    </concept>
+    <concept>
+        <code value="1c1"/>
+        <display value="1c1"/>
+    </concept>
+    <concept>
+        <code value="1c2"/>
+        <display value="1c2"/>
+    </concept>
+    <concept>
+        <code value="1c3"/>
+        <display value="1c3"/>
+    </concept>
+    <concept>
+        <code value="1d"/>
+        <display value="1d"/>
+    </concept>
+    <concept>
+        <code value="1mi"/>
+        <display value="1mi"/>
+    </concept>
+    <concept>
+        <code value="2"/>
+        <display value="2"/>
+    </concept>
+    <concept>
+        <code value="2a"/>
+        <display value="2a"/>
+    </concept>
+    <concept>
+        <code value="2a1"/>
+        <display value="2a1"/>
+    </concept>
+    <concept>
+        <code value="2a2"/>
+        <display value="2a2"/>
+    </concept>
+    <concept>
+        <code value="2b"/>
+        <display value="2b"/>
+    </concept>
+    <concept>
+        <code value="2c"/>
+        <display value="2c"/>
+    </concept>
+    <concept>
+        <code value="2d"/>
+        <display value="2d"/>
+    </concept>
+    <concept>
+        <code value="3"/>
+        <display value="3"/>
+    </concept>
+    <concept>
+        <code value="3a"/>
+        <display value="3a"/>
+    </concept>
+    <concept>
+        <code value="3b"/>
+        <display value="3b"/>
+    </concept>
+    <concept>
+        <code value="3c"/>
+        <display value="3c"/>
+    </concept>
+    <concept>
+        <code value="3d"/>
+        <display value="3d"/>
+    </concept>
+    <concept>
+        <code value="4"/>
+        <display value="4"/>
+    </concept>
+    <concept>
+        <code value="4a"/>
+        <display value="4a"/>
+    </concept>
+    <concept>
+        <code value="4b"/>
+        <display value="4b"/>
+    </concept>
+    <concept>
+        <code value="4c"/>
+        <display value="4c"/>
+    </concept>
+    <concept>
+        <code value="4d"/>
+        <display value="4d"/>
+    </concept>
+    <concept>
+        <code value="4e"/>
+        <display value="4e"/>
+    </concept>
+    <concept>
+        <code value="a"/>
+        <display value="a"/>
+    </concept>
+    <concept>
+        <code value="is"/>
+        <display value="is"/>
+    </concept>
+    <concept>
+        <code value="is(DCIS)"/>
+        <display value="is(DCIS)"/>
+    </concept>
+    <concept>
+        <code value="is(LCIS)"/>
+        <display value="is(LCIS)"/>
+    </concept>
+    <concept>
+        <code value="is(Paget)"/>
+        <display value="is(Paget)"/>
+    </concept>
+    <concept>
+        <code value="is(pd)"/>
+        <display value="is(pd)"/>
+    </concept>
+    <concept>
+        <code value="is(pu)"/>
+        <display value="is(pu)"/>
+    </concept>
+    <concept>
+        <code value="X"/>
+        <display value="X"/>
+    </concept>
+</CodeSystem>

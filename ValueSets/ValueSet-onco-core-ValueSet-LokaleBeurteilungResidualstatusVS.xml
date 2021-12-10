@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Beurteilung-Residualstatus ValueSet</b>
+            </p>
+            <p>Residualstatus</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/LokaleBeurteilungResidualstatusVS"/>
+    <version value="0.9.0" />
+    <name value="LokaleBeurteilungResidualstatusVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Residualstatus"/>
+    <compose>
+        <include>
+            <system
+                value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/LokaleBeurteilungResidualstatusCS"/>
+            <concept>
+                <code value="RX"/>
+                <display value="Vorhandensein von Residualtumor kann nicht beurteilt werden"/>
+            </concept>
+            <concept>
+                <code value="R0"/>
+                <display value="kein Residualtumor"/>
+            </concept>
+            <concept>
+                <code value="R1"/>
+                <display value="Mikroskopischer Residualtumor"/>
+            </concept>
+            <concept>
+                <code value="R1(is)"/>
+                <display value="In-Situ-Rest"/>
+            </concept>
+            <concept>
+                <code value="R1(cy+)"/>
+                <display value="Cytologischer Rest"/>
+            </concept>
+            <concept>
+                <code value="R2"/>
+                <display value="Makroskopischer Residualtumor"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

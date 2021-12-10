@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>OP-Intention ValueSet</b>
+            </p>
+            <p>OP Intention</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/OPIntentionVS"/>
+    <version value="0.9.0" />
+    <name value="OPIntentionVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="OP Intention"/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/OPIntentionCS"/>
+            <concept>
+                <code value="K"/>
+                <display value="kurativ"/>
+            </concept>
+            <concept>
+                <code value="P"/>
+                <display value="palliativ"/>
+            </concept>
+            <concept>
+                <code value="D"/>
+                <display value="diagnostisch"/>
+            </concept>
+            <concept>
+                <code value="R"/>
+                <display value="Revision/Komplikation"/>
+            </concept>
+            <concept>
+                <code value="S"/>
+                <display value="sonstiges"/>
+            </concept>
+            <concept>
+                <code value="X"/>
+                <display value="Fehlende Angabe"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

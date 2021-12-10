@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+    <id value="Patient-Pseudonym-example-1"/>
+    <meta>
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym"/>
+    </meta>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/PseudonymArtCS"/>
+                <code value="Global"/>
+            </coding>
+        </type>
+        <value value="pseudonym1"/>
+        <assigner>
+            <reference value="Organization/Organization-Organisation-example-1"/>
+        </assigner>
+    </identifier>
+
+    <gender value="female"/>
+    <birthDate value="2000-01-01"/>
+    <deceasedDateTime value="2020-10-10"/>
+    <managingOrganization>
+        <reference value="Organization/Organization-Organisation-example-1"/>
+    </managingOrganization>
+</Patient>

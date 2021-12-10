@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
+  <version value="0.9.0" />
+  <name value="Fall" />
+  <status value="active" />
+  <description value="Encounter bildet lediglich einen Zeitstrahl/Chronologie der verschiedenen Ereignissen (Diagnose, Therapien und Verläufe)" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter.status">
+      <path value="Encounter.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.class">
+      <path value="Encounter.class" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.class.system">
+      <path value="Encounter.class.system" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject" />
+      <short value="The patient present at the encounter" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period">
+      <path value="Encounter.period" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis">
+      <path value="Encounter.diagnosis" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.condition">
+      <path value="Encounter.diagnosis.condition" />
+      <short value="The diagnosis relevant to the encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

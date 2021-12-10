@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-ServiceRequest-ServiceRequest-ServiceRequest" />
+  <version value="0.9.0" />
+  <name value="ServiceRequest" />
+  <status value="active"/>
+  <description value="Dient der Verknüpfung der Diagnose mit dem Biomaterial. Da diese Verknüpfung bereits durch eine Extension realisiert wurde, wird dieses Profil in den Releases wahrscheinlich entfernt" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ServiceRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ServiceRequest.status">
+      <path value="ServiceRequest.status" />
+      <fixedCode value="completed" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.intent">
+      <path value="ServiceRequest.intent" />
+      <fixedCode value="plan" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.subject">
+      <path value="ServiceRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.encounter">
+      <path value="ServiceRequest.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.specimen">
+      <path value="ServiceRequest.specimen" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.bbmri.de/StructureDefinition/Specimen" />
+      </type>
+    </element>
+    </differential>
+</StructureDefinition>

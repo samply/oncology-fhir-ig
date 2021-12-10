@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>TNM-N ValueSet</b>
+            </p>
+            <p>TNM N-Kategorie</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMNVS"/>
+    <version value="0.9.0" />
+    <name value="TNMNVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="TNM N-Kategorie"/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMNCS"/>
+            <concept>
+                <code value="0"/>
+                <display value="0"/>
+            </concept>
+            <concept>
+                <code value="0(i+)"/>
+                <display value="0(i+)"/>
+            </concept>
+            <concept>
+                <code value="0(i-)"/>
+                <display value="0(i-)"/>
+            </concept>
+            <concept>
+                <code value="0(mol+)"/>
+                <display value="0(mol+)"/>
+            </concept>
+            <concept>
+                <code value="0(mol-)"/>
+                <display value="0(mol-)"/>
+            </concept>
+            <concept>
+                <code value="1"/>
+                <display value="1"/>
+            </concept>
+            <concept>
+                <code value="1a"/>
+                <display value="1a"/>
+            </concept>
+            <concept>
+                <code value="1b"/>
+                <display value="1b"/>
+            </concept>
+            <concept>
+                <code value="1c"/>
+                <display value="1c"/>
+            </concept>
+            <concept>
+                <code value="1mi"/>
+                <display value="1mi"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="2"/>
+            </concept>
+            <concept>
+                <code value="2a"/>
+                <display value="2a"/>
+            </concept>
+            <concept>
+                <code value="2b"/>
+                <display value="2b"/>
+            </concept>
+            <concept>
+                <code value="2c"/>
+                <display value="2c"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="3"/>
+            </concept>
+            <concept>
+                <code value="3a"/>
+                <display value="3a"/>
+            </concept>
+            <concept>
+                <code value="3b"/>
+                <display value="3b"/>
+            </concept>
+            <concept>
+                <code value="3c"/>
+                <display value="3c"/>
+            </concept>
+            <concept>
+                <code value="X"/>
+                <display value="X"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

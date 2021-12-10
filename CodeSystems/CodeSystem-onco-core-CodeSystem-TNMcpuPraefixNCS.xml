@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>TNM-c-p-u-Praefix-N CodeSystem</b>
+            </p>
+            <p>c/p/u Praefix</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMcpuPraefixNCS"/>
+    <version value="0.9.0" />
+    <name value="TNMcpuPraefixNCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="c/p/u Praefix"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="3"/>
+    <concept>
+        <code value="c"/>
+        <display
+            value="Kategorie wurde durch klinische Angaben festgestellt, bzw. erfüllt die Kriterien für p nicht"
+        />
+    </concept>
+    <concept>
+        <code value="p"/>
+        <display
+            value="Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können"
+        />
+    </concept>
+    <concept>
+        <code value="u"/>
+        <display
+            value="Feststellung mit Ultraschall (Unterkategorie von c mit besonderer diagnostischer Relevanz, z.B. beim Rektumkarzinom)"
+        />
+    </concept>
+</CodeSystem>

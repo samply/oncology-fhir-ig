@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Procedure-Operation" />
+  <version value="0.9.0" />
+  <name value="Operation" />
+  <status value="active" />
+  <description value="Ermittlung der Operationsdaten" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure.extension">
+      <path value="Procedure.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.extension:Intention">
+      <path value="Procedure.extension" />
+      <sliceName value="Intention" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-OPIntention" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.status">
+      <path value="Procedure.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.category">
+      <path value="Procedure.category" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SYSTTherapieartVS" />
+      </binding>
+    </element>
+    <element id="Procedure.category.coding">
+      <path value="Procedure.category.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Procedure.category.coding.code">
+      <path value="Procedure.category.coding.code" />
+      <short value="OP" />
+      <definition value="Gibt an, ob der Tumor operiert wurde" />
+      <min value="1" />
+      <fixedCode value="OP" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="OP:OP_Datum != NULL" />
+        <comment value="abzuleiten" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:33:2" />
+      </mapping>
+    </element>
+    <element id="Procedure.code.coding">
+      <path value="Procedure.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.code.coding:OPS">
+      <path value="Procedure.code.coding" />
+      <sliceName value="OPS" />
+    </element>
+    <element id="Procedure.code.coding:OPS.system">
+      <path value="Procedure.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/dimdi/ops" />
+    </element>
+    <element id="Procedure.code.coding:OPS.version">
+      <path value="Procedure.code.coding.version" />
+      <binding>
+        <strength value="extensible" />
+        <description value="OPS-Version" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/OPOPSVersionVS" />
+      </binding>
+    </element>
+    <element id="Procedure.code.coding:OPS.code">
+      <path value="Procedure.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Procedure.subject">
+      <path value="Procedure.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.encounter">
+      <path value="Procedure.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
+      </type>
+    </element>
+    <element id="Procedure.performed[x]">
+      <path value="Procedure.performed[x]" />
+      <short value="Datum der OP" />
+      <definition value="Datum der Operation" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="OP:OP_Datum" />
+        <comment value="OP:OP_Datum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:69:1" />
+      </mapping>
+    </element>
+    <element id="Procedure.performer.actor">
+      <path value="Procedure.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Organization-Organisation" />
+      </type>
+    </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.outcome.coding">
+      <path value="Procedure.outcome.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.outcome.coding:LokaleBeurteilungResidualstatus">
+      <path value="Procedure.outcome.coding" />
+      <sliceName value="LokaleBeurteilungResidualstatus" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Lokale Beurteilung Residualstatus" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/LokaleBeurteilungResidualstatusVS" />
+      </binding>
+    </element>
+    <element id="Procedure.outcome.coding:LokaleBeurteilungResidualstatus.system">
+      <path value="Procedure.outcome.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/LokaleBeurteilungResidualstatusCS" />
+    </element>
+    <element id="Procedure.outcome.coding:GesamtbeurteilungResidualstatus">
+      <path value="Procedure.outcome.coding" />
+      <sliceName value="GesamtbeurteilungResidualstatus" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Gesamtbeurteilung Resttumor" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/GesamtbeurteilungResidualstatusVS" />
+      </binding>
+    </element>
+    <element id="Procedure.outcome.coding:GesamtbeurteilungResidualstatus.system">
+      <path value="Procedure.outcome.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/GesamtbeurteilungResidualstatusCS" />
+    </element>
+  </differential>
+</StructureDefinition>

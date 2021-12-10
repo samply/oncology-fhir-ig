@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
+  <version value="0.9.0" />
+  <name value="Primaerdiagnose" />
+  <status value="active" />
+  <description value="Entspricht der Primärdiagnose. Dabei werden Parameter zur Klassifikation der Primärerkrankung erfasst. Diese umfassen ICD-10, ICD-O-3 (Topographie) und die Seitenlokalisation. Verknüpfungen mit der Histologie (Topographie) und die TNM-Klassifikationen (pathologisch/klinisch)" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition.extension">
+      <path value="Condition.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.extension:Fernmetastasen">
+      <path value="Condition.extension" />
+      <sliceName value="Fernmetastasen" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Fernmetastasen" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.extension:specimen">
+      <path value="Condition.extension" />
+      <sliceName value="specimen" />
+      <alias value="Bioprobe" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+      <short value="Code der Primärdiagnose" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding">
+      <path value="Condition.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.code.coding:icd-10-gm">
+      <path value="Condition.code.coding" />
+      <sliceName value="icd-10-gm" />
+      <short value="Code defined by ICD- system" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:icd-10-gm.system">
+      <path value="Condition.code.coding.system" />
+      <short value="ICD-10-GM" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/dimdi/icd-10-gm" />
+    </element>
+    <element id="Condition.code.coding:icd-10-gm.version">
+      <path value="Condition.code.coding.version" />
+      <short value="Version des ICD-10-Katalogs" />
+      <definition value="Katalogversion der ICD" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ICD-10-Katalog (Version)" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/ICDVersionVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Diagnose:Primaertumor_ICD_Version" />
+        <comment value="Diagnose:Primaertumor_ICD_Version" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:3:2" />
+        <comment value="urn:dktk:dataelement:3:2" />
+      </mapping>
+    </element>
+    <element id="Condition.code.coding:icd-10-gm.code">
+      <path value="Condition.code.coding.code" />
+      <short value="Primärdiagnose" />
+      <definition value="Kodierung der Erkrankung (Diagnose) des Patienten anhand der aktuellen ICD-Klassifizierung" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Diagnose:Primaertumor_ICD_Code" />
+        <comment value="Diagnose:Primaertumor_ICD_Code" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:29:2" />
+        <comment value="urn:dktk:dataelement:29:2" />
+      </mapping>
+    </element>
+    <element id="Condition.code.coding:alpha-id">
+      <path value="Condition.code.coding" />
+      <sliceName value="alpha-id" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/dimdi/alpha-id" />
+      </binding>
+    </element>
+    <element id="Condition.code.coding:alpha-id.system">
+      <path value="Condition.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/dimdi/alpha-id" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:alpha-id.code">
+      <path value="Condition.code.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:sct">
+      <path value="Condition.code.coding" />
+      <sliceName value="sct" />
+      <max value="1" />
+      <mustSupport value="false" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct" />
+      </binding>
+    </element>
+    <element id="Condition.code.coding:sct.system">
+      <path value="Condition.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:sct.code">
+      <path value="Condition.code.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:orphanet">
+      <path value="Condition.code.coding" />
+      <sliceName value="orphanet" />
+      <max value="1" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Condition.code.coding:orphanet.system">
+      <path value="Condition.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://www.orpha.net" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:orphanet.code">
+      <path value="Condition.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.text">
+      <path value="Condition.code.text" />
+      <short value="Primaertumor Diagnosetext" />
+      <definition value="Bezeichnung einer Erkrankung als Freitext" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Diagnose:Primaertumor_Diagnosetext" />
+        <comment value="Diagnose:Primaertumor_Diagnosetext" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:28:1" />
+      </mapping>
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding">
+      <path value="Condition.bodySite.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding:ICD-O-3-T">
+      <path value="Condition.bodySite.coding" />
+      <sliceName value="ICD-O-3-T" />
+      <short value="ICD O-3 Topographie" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="ICD-O-3 Topographie" />
+        <valueSet value="urn:oid:2.16.840.1.113883.6.43.1" />
+      </binding>
+    </element>
+    <element id="Condition.bodySite.coding:ICD-O-3-T.system">
+      <path value="Condition.bodySite.coding.system" />
+      <short value="ICD-O-3" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.840.1.113883.6.43.1" />
+    </element>
+    <element id="Condition.bodySite.coding:ICD-O-3-T.version">
+      <path value="Condition.bodySite.coding.version" />
+      <short value="ICD-O Katalog Topographie (Version)" />
+      <definition value="Katalogversion der ICD-O" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ICD-O-3 Version" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/ICDOVersionVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Diagnose:Primaertumor_Topographie_ICD_O_Version" />
+        <comment value="Diagnose:Primaertumor_Topographie_ICD_O_Version" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:5:2" />
+        <comment value="urn:dktk:dataelement:5:2" />
+      </mapping>
+    </element>
+    <element id="Condition.bodySite.coding:ICD-O-3-T.code">
+      <path value="Condition.bodySite.coding.code" />
+      <short value="Lokalisation" />
+      <definition value="Bezeichnung der Topographie einer Erkrankung basierend auf der aktuellen ICD-O-3 Klassifizierung" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="ICD-O-3 Topographie" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/MorphologieICDO3VS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Diagnose:Primaertumor_Topographie_ICD_O" />
+        <comment value="Diagnose:Primaertumor_Topographie_ICD_O" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:4:2" />
+        <comment value="urn:dktk:dataelement:4:2" />
+      </mapping>
+    </element>
+    <element id="Condition.bodySite.coding:ADT-Seitenlokalisation">
+      <path value="Condition.bodySite.coding" />
+      <sliceName value="ADT-Seitenlokalisation" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SeitenlokalisationVS" />
+      </binding>
+    </element>
+    <element id="Condition.bodySite.coding:ADT-Seitenlokalisation.system">
+      <path value="Condition.bodySite.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/SeitenlokalisationCS" />
+    </element>
+    <element id="Condition.bodySite.coding:ADT-Seitenlokalisation.code">
+      <path value="Condition.bodySite.coding.code" />
+      <short value="Seitenlokalisation nach ADT-GEKID" />
+      <definition value="Organspezifische Angabe der betroffenen Seite" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Diagnose:Seitenlokalisation" />
+        <comment value="Diagnose:Seitenlokalisation" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:6:2" />
+        <comment value="urn:dktk:dataelement:6:2" />
+      </mapping>
+    </element>
+    <element id="Condition.bodySite.coding:snomed-ct">
+      <path value="Condition.bodySite.coding" />
+      <sliceName value="snomed-ct" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Condition.bodySite.coding:snomed-ct.system">
+      <path value="Condition.bodySite.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding:snomed-ct.code">
+      <path value="Condition.bodySite.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <short value="Patient who has the condition" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.subject.reference">
+      <path value="Condition.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.encounter">
+      <path value="Condition.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
+      </type>
+    </element>
+    <element id="Condition.onset[x]">
+      <path value="Condition.onset[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+      </slicing>
+    </element>
+    <element id="Condition.onset[x]:onsetDateTime">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetDateTime" />
+      <short value="Tumor Diagnosedatum" />
+      <definition value="Das Datum an dem die meldepflichtige Diagnose erstmals durch einen Arzt klinisch oder mikroskopisch diagnostiziert wurde" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Diagnose:Diagnosedatum" />
+        <comment value="Diagnose:Diagnosedatum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:83:3" />
+        <comment value="urn:dktk:dataelement:83:3" />
+      </mapping>
+    </element>
+    <element id="Condition.stage">
+      <path value="Condition.stage" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Condition.stage.assessment">
+      <path value="Condition.stage.assessment" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMp" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMc" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.stage.assessment.reference">
+      <path value="Condition.stage.assessment.reference" />
+      <min value="1" />
+    </element>
+    <element id="Condition.evidence">
+      <path value="Condition.evidence" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.evidence.detail">
+      <path value="Condition.evidence.detail" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Histologie" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GenetischeVariante" />
+      </type>
+      <mustSupport value="false" />
+    </element>
+    <element id="Condition.evidence.detail.reference">
+      <path value="Condition.evidence.detail.reference" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

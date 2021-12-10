@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>vitalstatus ValueSet</b>
+            </p>
+            <p>Vitalstatus</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/VitalstatusVS"/>
+    <version value="0.9.0" />
+    <name value="VitalstatusVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Vitalstatus"/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/VitalstatusCS"/>
+            <concept>
+                <code value="lebend"/>
+                <display value="lebend"/>
+            </concept>
+            <concept>
+                <code value="verstorben"/>
+                <display value="verstorben"/>
+            </concept>
+            <concept>
+                <code value="unbekannt"/>
+                <display value="unbekannt"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalImpression xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    
+    xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <id value="ClinicalImpression-Verlauf-example-1"/>
+    <meta>
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-ClinicalImpression-Verlauf" />
+    </meta>
+    <status value="completed" />
+    <subject>
+        <reference value="Patient/Patient-Patient-example-1" />
+    </subject>
+    <effectiveDateTime value="2018-01-01" />
+    <problem>
+        <reference value="Condition/Condition-Primaerdiagnose-example-1" />
+    </problem>
+    <finding>
+        <itemReference>
+            <reference value="Observation/Observation-Vitalstatus-example-1"/>
+        </itemReference>
+    </finding>
+    <finding>
+        <itemReference>
+            <reference value="Observation/Observation-TumorstatusLymphknoten-example-1"/>
+        </itemReference>
+    </finding>
+    <finding>
+        <itemReference>
+            <reference value="Observation/Observation-LokalerTumorstatus-example-1"/>
+        </itemReference>
+    </finding>
+    <finding>
+        <itemReference>
+            <reference value="Observation/Observation-TumorstatusFernmetastasen-example-1"/>
+        </itemReference>
+    </finding>
+    <finding>
+        <itemReference>
+            <reference value="Observation/Observation-GesamtbeurteilungTumorstatus-example-1"/>
+        </itemReference>
+    </finding>
+    <finding>
+        <itemReference>
+            <reference value="Observation/Observation-Fernmetastasen-example-1"/>
+        </itemReference>
+    </finding>
+</ClinicalImpression>

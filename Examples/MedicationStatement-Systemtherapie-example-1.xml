@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationStatement xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id value="MedicationStatement-Systemtherapie-example-1"/>
+    <meta>
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-MedicationStatement-Systemtherapie"/>
+    </meta>
+    <extension url="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-StellungZurOp">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/SYSTStellungOPCS"/>
+                <code value="A"/>
+                <display value="adjuvant"/>
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <extension url="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntention">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/SYSTIntentionCS"/>
+                <code value="P"/>
+                <display value="palliativ"/>
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <extension url="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-LokaleResidualstatus">
+        <valueReference>
+            <reference value="Observation/Observation-LokaleBeurteilungResidualstatus-example-1"/>
+        </valueReference>
+        </extension>
+    <extension url="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-GesamtbeurteilungResidualstatus">
+        <valueReference>
+            <reference value="Observation/Observation-GesamtbeurteilungResidualstatus-example-1"/>
+        </valueReference>
+    </extension>
+    
+    <status value="active"/>
+    <category>
+        <coding>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/SYSTTherapieartCS"/>
+            <code value="CH"/>
+            <display value="Chemotherapie"/>
+        </coding>
+    </category>
+    <!-- @TODO: nicht relevant für MDS, aber es ist ein Muss-Feld in der Ressource -->
+    <medicationCodeableConcept>
+        <coding>
+            <code value="Ja"/>
+        </coding>
+    </medicationCodeableConcept>
+    <subject>
+        <reference value="Patient/Patient-Patient-example-1"/>
+    </subject>
+    <context>
+        <reference value="Encounter/Encounter-Fall-example-1"/>
+    </context>
+</MedicationStatement>
