@@ -22,6 +22,16 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="Condition.extension:ReferenzPrimaerdiagnose">
+      <path value="Condition.extension" />
+      <sliceName value="ReferenzPrimaerdiagnose" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/condition-related" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="Condition.extension:Fernmetastasen">
       <path value="Condition.extension" />
       <sliceName value="Fernmetastasen" />
@@ -57,20 +67,28 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:icd-10-gm">
+    <element id="Condition.code.coding:icd10-gm">
       <path value="Condition.code.coding" />
-      <sliceName value="icd-10-gm" />
+      <sliceName value="icd10-gm" />
       <short value="Code defined by ICD- system" />
       <max value="1" />
+      <type>
+        <code value="Coding" />
+        <profile value="http://fhir.de/StructureDefinition/CodingICD10GM" />
+      </type>
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/bfarm/icd-10-gm" />
+      </binding>
     </element>
-    <element id="Condition.code.coding:icd-10-gm.system">
+    <element id="Condition.code.coding:icd10-gm.system">
       <path value="Condition.code.coding.system" />
       <short value="ICD-10-GM" />
       <min value="1" />
-      <fixedUri value="http://fhir.de/CodeSystem/dimdi/icd-10-gm" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/icd-10-gm" />
     </element>
-    <element id="Condition.code.coding:icd-10-gm.version">
+    <element id="Condition.code.coding:icd10-gm.version">
       <path value="Condition.code.coding.version" />
       <short value="Version des ICD-10-Katalogs" />
       <definition value="Katalogversion der ICD" />
@@ -92,7 +110,7 @@
         <comment value="urn:dktk:dataelement:3:2" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:icd-10-gm.code">
+    <element id="Condition.code.coding:icd10-gm.code">
       <path value="Condition.code.coding.code" />
       <short value="Primärdiagnose" />
       <definition value="Kodierung der Erkrankung (Diagnose) des Patienten anhand der aktuellen ICD-Klassifizierung" />
@@ -113,6 +131,10 @@
       <path value="Condition.code.coding" />
       <sliceName value="alpha-id" />
       <max value="1" />
+      <type>
+        <code value="Coding" />
+        <profile value="http://fhir.de/StructureDefinition/CodingAlphaID" />
+      </type>
       <binding>
         <strength value="required" />
         <valueSet value="http://fhir.de/ValueSet/dimdi/alpha-id" />
@@ -121,7 +143,7 @@
     <element id="Condition.code.coding:alpha-id.system">
       <path value="Condition.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://fhir.de/CodeSystem/dimdi/alpha-id" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/alpha-id" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:alpha-id.code">
