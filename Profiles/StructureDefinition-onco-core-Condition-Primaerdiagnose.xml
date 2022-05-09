@@ -137,7 +137,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://fhir.de/ValueSet/dimdi/alpha-id" />
+        <valueSet value="http://fhir.de/ValueSet/bfarm/alpha-id" />
       </binding>
     </element>
     <element id="Condition.code.coding:alpha-id.system">
