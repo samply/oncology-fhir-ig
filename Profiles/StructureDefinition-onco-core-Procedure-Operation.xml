@@ -79,11 +79,15 @@
     <element id="Procedure.code.coding:OPS">
       <path value="Procedure.code.coding" />
       <sliceName value="OPS" />
+      <type>
+        <code value="Coding" />
+        <profile value="http://fhir.de/StructureDefinition/CodingOPS" />
+      </type>
     </element>
     <element id="Procedure.code.coding:OPS.system">
       <path value="Procedure.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://fhir.de/CodeSystem/dimdi/ops" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/ops" />
     </element>
     <element id="Procedure.code.coding:OPS.version">
       <path value="Procedure.code.coding.version" />
