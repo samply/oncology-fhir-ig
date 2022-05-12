@@ -3,7 +3,7 @@
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Histologie" />
   <version value="0.9.0" />
   <name value="Histologie" />
-  <status value="active" />
+  <status value="draft" />
   <description value="Gibt an, welche Histologie der Tumor aufweist, basierend auf der aktuellen ICD-O-3 Klassifizierung" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -68,7 +68,7 @@
       </mapping>
       <mapping>
         <identity value="ISO-11179" />
-        <map value="urn:adt:dataelement:25:1" />
+        <map value="urn:adt:dataelement:35:1" />
       </mapping>
     </element>
     <element id="Observation.performer">

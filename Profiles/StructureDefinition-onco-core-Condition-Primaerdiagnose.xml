@@ -3,7 +3,7 @@
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
   <version value="0.9.0" />
   <name value="Primaerdiagnose" />
-  <status value="active" />
+  <status value="draft" />
   <description value="Entspricht der Primärdiagnose. Dabei werden Parameter zur Klassifikation der Primärerkrankung erfasst. Diese umfassen ICD-10, ICD-O-3 (Topographie) und die Seitenlokalisation. Verknüpfungen mit der Histologie (Topographie) und die TNM-Klassifikationen (pathologisch/klinisch)" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
