@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GenetischeVariante" />
-  <version value="0.9.0" />
+  <version value="1.0.0" />
   <name value="GenetischeVariante" />
   <status value="active" />
   <description value="Datenelemente zur Erfassung molekularer Marker im DKTK" />
@@ -182,5 +182,98 @@
         <comment value="urn:dktk:dataelement:2:2" />
       </mapping>
     </element>
+    
+    <element id="Observation.component:Amino-acid-change">
+      <path value="Observation.component" />
+      <sliceName value="Amino-acid-change" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:Amino-acid-change.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="48005-3" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:Amino-acid-change.value[x]">
+      <path value="Observation.component.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    
+    <element id="Observation.component:DNA-change">
+      <path value="Observation.component" />
+      <sliceName value="DNA-change" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:DNA-change.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="81290-9" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:DNA-change.value[x]">
+      <path value="Observation.component.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    
+    <element id="Observation.component:RefSeq-NCBI-ID">
+      <path value="Observation.component" />
+      <sliceName value="RefSeq-NCBI" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:RefSeq-NCBI-ID.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="81248-7" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:RefSeq-NCBI-ID.value[x]">
+      <path value="Observation.component.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    
+    <element id="Observation.component:Ensembl-ID">
+      <path value="Observation.component" />
+      <sliceName value="Ensembl-ID" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:Ensembl-ID.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="81249-5" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    
+    <element id="Observation.component:Ensembl-ID.value[x]">
+      <path value="Observation.component.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    
   </differential>
 </StructureDefinition>

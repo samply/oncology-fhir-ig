@@ -96,6 +96,22 @@
                 <code value="2021"/>
                 <display value="Version 2021"/>
             </concept>
+        <concept>
+                <code value="2022"/>
+                <display value="Version 2022"/>
+            </concept>
+            <concept>
+                <code value="2023"/>
+                <display value="Version 2023"/>
+            </concept>
+            <concept>
+                <code value="2024"/>
+                <display value="Version 2024"/>
+            </concept>
+            <concept>
+                <code value="2025"/>
+                <display value="Version 2025"/>
+            </concept>
         </include>
     </compose>
 </ValueSet>

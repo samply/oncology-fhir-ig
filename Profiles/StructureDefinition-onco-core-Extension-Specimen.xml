@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen"/>
+  <version value="0.9.0" />
+  <name value="Specimen"/>
+  <status value="active"/>
+  <date value="2019-07-01"/>
+  <publisher value="DKTK"/>
+  <description value="Extension: eine Referenz zum Biomaterial"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Condition"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Referenz zur Probe"/>
+      <definition value="Referenz zur Probe/Specimen (GBA-Profil)"/>
+      <min value="0"/>
+      <max value="*"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://fhir.bbmri.de/StructureDefinition/Specimen"/>
+        <aggregation value="referenced"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

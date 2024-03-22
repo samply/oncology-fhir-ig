@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Therapieempfehlung CodeSystem</b>
+            </p>
+            <p>Therapieempfehlung</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TherapieempfehlungCS"/>
+    <version value="0.9.0" />
+    <name value="TherapieempfehlungCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Art der Therapie"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="11"/>
+    <concept>
+        <code value="CH"/>
+        <display value="Chemotherapie"/>
+    </concept>
+    <concept>
+        <code value="HO"/>
+        <display value="Hormontherapie"/>
+    </concept>
+    <concept>
+        <code value="IM"/>
+        <display value="Immun- und Antikörpertherapie"/>
+    </concept>
+    <concept>
+        <code value="KM"/>
+        <display value="Knochenmarkstransplantation"/>
+    </concept>
+    <concept>
+        <code value="WS"/>
+        <display value="Wait and see"/>
+    </concept>
+    <concept>
+        <code value="AS"/>
+        <display value="Active Surveillance"/>
+    </concept>
+    <concept>
+        <code value="ZS"/>
+        <display value="Zielgerichtete Substanzen"/>
+    </concept>
+    <concept>
+        <code value="SO"/>
+        <display value="Sonstiges"/>
+    </concept>
+    <concept>
+        <code value="KW"/>
+        <display value="keine weitere tumorspezifische Therapie empfohlen"/>
+    </concept>
+    <!-- ADT Erweiterung -->
+    <concept>
+        <code value="ST"/>
+        <display value="Strahlentherapie"/>
+    </concept>
+            <concept>
+                <code value="OP"/>
+                <display value="Operation"/>
+            </concept>
+</CodeSystem>

@@ -12,16 +12,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
   <derivation value="constraint" />
   <differential>
-    <element id="MedicationStatement.extension">
-      <path value="MedicationStatement.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="MedicationStatement.extension:StellungZurOp">
       <path value="MedicationStatement.extension" />
       <sliceName value="StellungZurOp" />
@@ -54,8 +44,8 @@
     <element id="MedicationStatement.extension:Intention">
       <path value="MedicationStatement.extension" />
       <sliceName value="Intention" />
-      <short value="Intention Chemotherapie" />
-      <definition value="Gibt die Intention der Chemotherapie an" />
+      <short value="Intention systemische Therapie" />
+      <definition value="Gibt die Intention der systemischen Therapie an" />
       <type>
         <code value="Extension" />
         <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntention" />
@@ -91,6 +81,14 @@
     </element>
     <element id="MedicationStatement.extension:LokaleResidualstatus.value[x]">
       <path value="MedicationStatement.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.extension:LokaleResidualstatus.value[x]:valueReference">
@@ -116,6 +114,14 @@
     </element>
     <element id="MedicationStatement.extension:GesamtbeurteilungResidualstatus.value[x]">
       <path value="MedicationStatement.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.extension:GesamtbeurteilungResidualstatus.value[x]:valueReference">
@@ -190,6 +196,34 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding">
+      <path value="MedicationStatement.medication[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding:ATC">
+      <path value="MedicationStatement.medication[x].coding" />
+      <sliceName value="ATC" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding:ATC.system">
+      <path value="MedicationStatement.medication[x].coding.system" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/atc" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding:ATC.version">
+      <path value="MedicationStatement.medication[x].coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding:ATC.code">
+      <path value="MedicationStatement.medication[x].coding.code" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationStatement.medication[x].text">

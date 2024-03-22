@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+  xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-StellungZurOp"/>
+  <version value="0.9.0" />
+  <name value="StellungZurOp"/>
+  <title value="Stellung der Therapie zur Operation"/>
+  <status value="active"/>
+  <date value="2019-07-01"/>
+  <publisher value="DKTK"/>
+  <description value="Gibt an, in welchem Bezug zu einer Operation die vorliegende Therapie (Bestrahlung, Chemotherapie etc.) steht" />
+  <fhirVersion value="4.0.0"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="MedicationStatement"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Procedure"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri
+        value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-StellungZurOp"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SYSTStellungOPVS"/>
+      </binding>
+    </element>
+    <element id="Extension.value[x].coding.code">
+      <path value="Extension.value[x].coding.code"/>
+      <short value="Stellung zu operativer Therapie"/>
+      <definition
+        value="Gibt an, in welchem Bezug zu einer Operation die vorliegende Therapie (Bestrahlung, Chemotherapie etc.) steht"/>
+      <min value="1"/>
+      <mapping>
+        <identity value="ADT-GEKID"/>
+        <map value="ST:ST_Stellung_OP, ST:ST_Stellung_OP"/>
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179"/>
+        <map value="urn:dktk:dataelement:68:3, urn:dktk:dataelement:70:3"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

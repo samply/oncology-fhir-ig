@@ -1,0 +1,118 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-AdverseEvent-Nebenwirkung" />
+  <version value="1.0.0" />
+  <name value="Nebenwirkung" />
+  <status value="active" />
+  <description value="Dieses Profil beschreibt die Nebenwirkung von Strahlentherapie und systemische Therapie in der Onkologie." />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AdverseEvent" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AdverseEvent" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AdverseEvent.event">
+      <path value="AdverseEvent.event" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://hl7.org/fhir/us/ctcae/ValueSet/ctcae-term-value-set" />
+      </binding>
+    <mapping>
+        <identity value="ADT" />
+        <map value="ST_Nebenwirkung; SYST_Nebenwirkung" />
+        <comment value="ST_Nebenwirkung; SYST_Nebenwirkung" />
+      </mapping>
+    </element>
+    <element id="AdverseEvent.event.coding">
+      <path value="AdverseEvent.event.coding" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AdverseEvent.event.coding.system">
+      <path value="AdverseEvent.event.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AdverseEvent.event.coding.version">
+      <path value="AdverseEvent.event.coding.version" />
+      <short value="Nebenwirkungen nach CTCAE Version" />
+      <definition value="Nebenwirkungen nach CTCAE Version.  Für den medizinischen Katalog gültige Versionsbezeichnungen. Z.B.: &#xD;&#xA;4, 4.03, 5.0, Sonstige: Falls andere bzw. ältere Versionen verwendet werden" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT" />
+        <map value="ST_Nebenwirkung; SYST_Nebenwirkung" />
+        <comment value="ST_Nebenwirkung; SYST_Nebenwirkung" />
+      </mapping>
+    </element>
+    <element id="AdverseEvent.event.coding.code">
+      <path value="AdverseEvent.event.coding.code" />
+      <short value="MedDRA- oder CTCAE-Code" />
+      <definition value="Nebenwirkungen nach CTCAE Art: Gibt an, zu welcher Nebenwirkung es bei der Bestrahlung oder der systemischen Therapie gekommen ist. Bei der Bestrahlung sind sogenannte akute Nebenwirkungen bis zum 90. Tag nach Bestrahlungsbeginn gemeint." />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT" />
+        <map value="Nebenwirkung_Art" />
+        <comment value="Nebenwirkung_Art" />
+      </mapping>
+    </element>
+    <element id="AdverseEvent.event.text">
+      <path value="AdverseEvent.event.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AdverseEvent.subject">
+      <path value="AdverseEvent.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="AdverseEvent.severity">
+      <path value="AdverseEvent.severity" />
+      <short value="Nebenwirkungen nach CTCAE-Grad" />
+      <definition value="Gibt an, zu welchem Schweregrad von Nebenwirkungen es bei der Bestrahlung oder der systemischen Therapie gekommen ist." />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT" />
+        <map value="Nebenwirkung_Grad" />
+        <comment value="Nebenwirkung_Grad" />
+      </mapping>
+    </element>
+    <element id="AdverseEvent.severity.coding">
+      <path value="AdverseEvent.severity.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Nebenwirkungen nach CTCAE-Grad" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/NebenwirkungGradVS" />
+      </binding>
+    </element>
+    <element id="AdverseEvent.severity.coding.system">
+      <path value="AdverseEvent.severity.coding.system" />
+      <fixedUri value="http://hl7.org/fhir/us/ctcae/CodeSystem/ctcae-grade-code-system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AdverseEvent.severity.coding.code">
+      <path value="AdverseEvent.severity.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AdverseEvent.suspectEntity">
+      <path value="AdverseEvent.suspectEntity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AdverseEvent.suspectEntity.instance">
+      <path value="AdverseEvent.suspectEntity.instance" />
+      <short value="Bezieht sich auf die spezifische Ressource (MedicationStatment/Strahlentherapie, die das unerwünschte Ereignis verursacht hat" />
+      <comment value="Gibt an, wodurch die Nebenwirkung tatsächlich verursacht wurde.  Dies kann eine MedicationStatment- oder Strahlentherapie-Ressource sein." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-MedicationStatement-Systemtherapie" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Procedure-Strahlentherapie" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

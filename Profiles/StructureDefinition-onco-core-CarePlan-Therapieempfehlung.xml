@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-CarePlan-Therapieempfehlung" />
+  <version value="1.0.0" />
+  <name value="Therapieempfehlung" />
+  <status value="active" />
+  <description value="herapieempfehlung der Tumorkonferenz." />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CarePlan" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CarePlan">
+      <path value="CarePlan" />
+      <short value="Therapieempfehlung" />
+    </element>
+    <element id="CarePlan.identifier">
+      <path value="CarePlan.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.identifier.value">
+      <path value="CarePlan.identifier.value" />
+      <short value="Ein Wert, der eindeutig ist wie die Tumorkonferenz_ID" />
+      <definition value="Ein Wert, der eindeutig ist wie die Tumorkonferenz_ID" />
+      <min value="1" />
+    </element>
+    <element id="CarePlan.subject">
+      <path value="CarePlan.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.created">
+      <path value="CarePlan.created" />
+      <short value="Tumorkonferenz Therapieplanung Datum" />
+      <definition value="Datum der Durchführung der Tumorkonferenz bzw. der sonstigen Therapieplanung." />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT" />
+        <map value="Tumorkonferenz:Datum" />
+        <comment value="Tumorkonferenz:Datum" />
+      </mapping>
+    </element>
+    <element id="CarePlan.activity">
+      <path value="CarePlan.activity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.activity.detail">
+      <path value="CarePlan.activity.detail" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.activity.detail.code">
+      <path value="CarePlan.activity.detail.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.activity.detail.code.coding">
+      <path value="CarePlan.activity.detail.code.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Code defined by oBDS" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TherapieempfehlungVS" />
+      </binding>
+    </element>
+    <element id="CarePlan.activity.detail.code.coding.system">
+      <path value="CarePlan.activity.detail.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TherapieempfehlungCS" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.activity.detail.code.coding.code">
+      <path value="CarePlan.activity.detail.code.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT" />
+        <map value="Therapieempfehlung:Typ_Therapieempfehlung" />
+        <comment value="Therapieempfehlung:Typ_Therapieempfehlung" />
+      </mapping>
+    </element>
+    <element id="CarePlan.activity.detail.status">
+      <path value="CarePlan.activity.detail.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.activity.detail.statusReason">
+      <path value="CarePlan.activity.detail.statusReason" />
+      <short value="Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten" />
+      <definition value="Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.activity.detail.statusReason.coding">
+      <path value="CarePlan.activity.detail.statusReason.coding" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/JNUVS" />
+      </binding>
+      <mapping>
+        <identity value="oBDS" />
+        <map value="19.2" />
+        <comment value="Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten" />
+      </mapping>
+    </element>
+    <element id="CarePlan.activity.detail.statusReason.coding.system">
+      <path value="CarePlan.activity.detail.statusReason.coding.system" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/JNUCS" />
+    </element>
+    <element id="CarePlan.activity.detail.statusReason.coding.code">
+      <path value="CarePlan.activity.detail.statusReason.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

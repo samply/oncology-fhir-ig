@@ -74,15 +74,6 @@
       <path value="Observation.value[x].coding" />
       <sliceName value="icd-10-gm" />
       <mustSupport value="true" />
-    <mapping>
-        <identity value="ADT-GEKID" />
-        <map value="Tod:Todesursachen_ICD" />
-        <comment value="Tod:Todesursachen_ICD" />
-      </mapping>
-      <mapping>
-        <identity value="ISO-11179" />
-        <map value="urn:adt:dataelement:105:1" />
-      </mapping>
     </element>
     <element id="Observation.value[x].coding:icd-10-gm.system">
       <path value="Observation.value[x].coding.system" />
@@ -91,20 +82,25 @@
       <fixedUri value="http://fhir.de/CodeSystem/bfarm/icd-10-gm" />
       <mustSupport value="true" />
     </element>
+    <element id="Observation.value[x].coding:icd-10-gm.code">
+      <path value="Observation.value[x].coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Tod:Todesursachen_ICD" />
+        <comment value="Tod:Todesursachen_ICD" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:105:1" />
+      </mapping>
+      </element>
     <element id="Observation.value[x].coding:todTumorbedingt">
       <path value="Observation.value[x].coding" />
       <sliceName value="todTumorbedingt" />
       <short value="Tod Tumor bedingt" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="ADT-GEKID" />
-        <map value="Tod:Tod_tumorbedingt" />
-        <comment value="Tod:Tod_tumorbedingt" />
-      </mapping>
-      <mapping>
-        <identity value="ISO-11179" />
-        <map value="urn:adt:dataelement:104:1" />
-      </mapping>
       <binding>
         <strength value="required" />
         <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/JNUVS" />
@@ -116,6 +112,20 @@
       <min value="1" />
       <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/JNUCS" />
       <mustSupport value="true" />
+    </element>
+  <element id="Observation.value[x].coding:todTumorbedingt.code">
+      <path value="Observation.value[x].coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Tod:Tod_tumorbedingt" />
+        <comment value="Tod:Tod_tumorbedingt" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:104:1" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

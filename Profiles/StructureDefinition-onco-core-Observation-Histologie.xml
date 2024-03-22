@@ -131,7 +131,7 @@
       <binding>
         <strength value="required" />
         <description value="ICD-O-3 Morphologie" />
-        <valueSet value="urn:oid:2.16.840.1.113883.6.43.1" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/MorphologieICDO3VS" />
       </binding>
       <mapping>
         <identity value="ADT-GEKID" />

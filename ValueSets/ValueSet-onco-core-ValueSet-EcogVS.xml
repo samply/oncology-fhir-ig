@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>ECOG ValueSet</b>
+            </p>
+            <p>ECOG Stadium</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/EcogVS"/>
+    <version value="0.9.0" />
+    <name value="EcogVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="ECOG"/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/EcogCS"/>
+            <concept>
+                <code value="0"/>
+                <display value="Normale, uneingeschränkte Aktivität wie vor der Erkrankung (90 - 100 % nach Karnofsky)"/>
+            </concept>
+            <concept>
+                <code value="1"/>
+                <display value="Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen (z.B. leichte Hausarbeit oder Büroarbeit) möglich (70 - 80 % nach Karnofsky)"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50% der Wachzeit aufstehen (50 - 60 % nach Karnofsky)"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="Nur begrenzte Selbstversorgung möglich; ist 50% oder mehr der Wachzeit an Bett oder Stuhl gebunden (30 - 40 % nach Karnofsky)"/>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden (10 - 20% nach Karnofsky)"/>
+            </concept>
+            <concept>
+                <code value="U"/>
+                <display value="Unbekannt"/>
+            </concept>
+            
+        </include>
+    </compose>
+</ValueSet>

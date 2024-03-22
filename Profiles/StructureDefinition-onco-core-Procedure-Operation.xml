@@ -12,16 +12,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
   <derivation value="constraint" />
   <differential>
-    <element id="Procedure.extension">
-      <path value="Procedure.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Procedure.extension:Intention">
       <path value="Procedure.extension" />
       <sliceName value="Intention" />
@@ -188,6 +178,60 @@
       <path value="Procedure.outcome.coding.system" />
       <min value="1" />
       <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/GesamtbeurteilungResidualstatusCS" />
+    </element>
+  <element id="Procedure.complication">
+      <path value="Procedure.complication" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="OP:OP_Komplikationen" />
+        <comment value="OP Komplikationen" />
+      </mapping>
+    </element>
+    <element id="Procedure.complication:ADT-OPKomplikationen">
+      <path value="Procedure.complication" />
+      <sliceName value="ADT-OPKomplikationen" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="OP Komplikationen nach ADT/oBDS" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/OPKomplikationenVS" />
+      </binding>
+    </element>
+    <element id="Procedure.complication:ADT-OPKomplikationen.coding.system">
+      <path value="Procedure.complication.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/ValueSet/bfarm/icd-10-gm" />
+    </element>
+    <element id="Procedure.complication:ADT-OPKomplikationen.coding.code">
+      <path value="Procedure.complication.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.complication:ICD-10">
+      <path value="Procedure.complication" />
+      <sliceName value="ICD-10" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/bfarm/icd-10-gm" />
+      </binding>
+    </element>
+    <element id="Procedure.complication:ICD-10.coding.system">
+      <path value="Procedure.complication.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/icd-10-gm" />
+    </element>
+    <element id="Procedure.complication:ICD-10.coding.code">
+      <path value="Procedure.complication.coding.code" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Nebenwirkung Grad CodeSystem</b>
+            </p>
+            <p>Nebenwirkung Grad</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/NebenwirkungGradCS"/>
+    <version value="0.9.0" />
+    <name value="NebenwirkungGradCS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Nebenwirkung Grad"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="7"/>
+            <concept>
+                <code value="K"/>
+                <display value="keine"/>
+            </concept>
+            <concept>
+                <code value="1"/>
+                <display value="mild"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="moderat"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="schwerwiegend"/>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="lebensbedrohlich"/>
+            </concept>
+            <concept>
+                <code value="5"/>
+                <display value="tödlich"/>
+            </concept>
+
+            <concept>
+                <code value="U"/>
+                <display value="unbekannt"/>
+            </concept>
+</CodeSystem>

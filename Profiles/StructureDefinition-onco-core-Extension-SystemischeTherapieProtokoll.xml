@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+  xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SystemischeTherapieProtokoll"/>
+  <version value="0.9.0" />
+  <name value="SystemischeTherapieProtokoll"/>
+  <status value="active"/>
+  <description value="Gibt an, nach welchem Protokoll die Systemtherapie durchgeführt wurde" />
+  <fhirVersion value="4.0.0"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="MedicationStatement"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri
+        value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SystemischeTherapieProtokoll"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SystemischeTherapieProtokollVS"/>
+      </binding>
+    </element>
+    <element id="Extension.value[x].coding.code">
+      <path value="Extension.value[x].coding.code"/>
+      <short value="Systemische Therapie Protokoll"/>
+      <definition value="Protokoll, nach welchem die Systemtherapie durchgeführt wurde"/>
+      <min value="1"/>
+      <mapping>
+        <identity value="ADT-GEKID"/>
+        <map value="SYST:SYST_Protokoll"/>
+        <comment value="SYST:SYST_Protokoll"/>
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179"/>
+        <map value="urn:adt:dataelement:89:1"/>
+        <comment value="urn:adt:dataelement:89:1"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

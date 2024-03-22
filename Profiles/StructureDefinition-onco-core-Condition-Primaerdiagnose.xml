@@ -12,16 +12,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
   <derivation value="constraint" />
   <differential>
-    <element id="Condition.extension">
-      <path value="Condition.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Condition.extension:ReferenzPrimaerdiagnose">
       <path value="Condition.extension" />
       <sliceName value="ReferenzPrimaerdiagnose" />
@@ -225,12 +215,7 @@
       <short value="ICD O-3 Topographie" />
       <max value="1" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="ICD-O-3 Topographie" />
-        <valueSet value="urn:oid:2.16.840.1.113883.6.43.1" />
-      </binding>
-    </element>
+      </element>
     <element id="Condition.bodySite.coding:ICD-O-3-T.system">
       <path value="Condition.bodySite.coding.system" />
       <short value="ICD-O-3" />
@@ -268,7 +253,7 @@
       <binding>
         <strength value="required" />
         <description value="ICD-O-3 Topographie" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/MorphologieICDO3VS" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TopographieICDO3VS" />
       </binding>
       <mapping>
         <identity value="ADT-GEKID" />
@@ -316,7 +301,6 @@
     <element id="Condition.bodySite.coding:snomed-ct">
       <path value="Condition.bodySite.coding" />
       <sliceName value="snomed-ct" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="false" />
     </element>
@@ -359,6 +343,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
+      <rules value="open" />
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetDateTime">
@@ -400,6 +385,27 @@
     </element>
     <element id="Condition.evidence">
       <path value="Condition.evidence" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.evidence.code">
+      <path value="Condition.evidence.code" />
+      <short value="Diagnosesicherung" />
+      <definition value="Höchste erreichte Diagnosesicherheit zum Diagnosedatum" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Diagnosesicherung" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/DiagnosesicherungVS" />
+      </binding>
+    </element>
+    <element id="Condition.evidence.code.coding.system">
+      <path value="Condition.evidence.code.coding.system" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/DiagnosesicherungCS" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.evidence.code.coding.code">
+      <path value="Condition.evidence.code.coding.code" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.evidence.detail">
