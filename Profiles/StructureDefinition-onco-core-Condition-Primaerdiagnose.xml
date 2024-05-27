@@ -215,7 +215,7 @@
       <short value="ICD O-3 Topographie" />
       <max value="1" />
       <mustSupport value="true" />
-      </element>
+    </element>
     <element id="Condition.bodySite.coding:ICD-O-3-T.system">
       <path value="Condition.bodySite.coding.system" />
       <short value="ICD-O-3" />
@@ -343,7 +343,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
-      <rules value="open" />
+        <rules value="open" />
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetDateTime">

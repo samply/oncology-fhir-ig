@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>TNMPnKategorie </b>
+            </p>
+            <p>Perineuralinvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM.</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMPnKategorie"/>
+    <version value="1.0.0" />
+    <name value="TNMPnKategorie"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Perineuralinvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM."/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="3"/>
+    <concept>
+    <code value="PnX"/>
+    <display value="Perineurale Invasion kann nicht beurteilt werden"/>
+</concept>
+<concept>
+    <code value="Pn0"/>
+    <display value="Keine perineurale Invasion"/>
+</concept>
+<concept>
+    <code value="Pn1"/>
+    <display value="Perineurale Invasion"/>
+</concept>
+
+</CodeSystem>

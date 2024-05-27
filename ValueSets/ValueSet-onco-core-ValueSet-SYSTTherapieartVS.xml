@@ -10,7 +10,7 @@
         </div>
     </text>
     <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SYSTTherapieartVS"/>
-    <version value="0.9.0" />
+    <version value="1.0.0" />
     <name value="SYSTTherapieartVS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
@@ -64,6 +64,35 @@
             <concept>
                 <code value="OP"/>
                 <display value="Operation"/>
+            </concept>
+            <concept>
+                <code value="CI"/>
+                <display value="Chemo- + Immun-/Antikörpertherapie"/>
+            </concept>
+            
+            <concept>
+                <code value="CZ"/>
+                <display value="Chemotherapie + zielgerichtete Substanzen"/>
+            </concept>
+            
+            <concept>
+                <code value="CI"/>
+                <display value="Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen"/>
+            </concept>
+            
+            <concept>
+                <code value="IZ"/>
+                <display value="Immun-/Antikörpertherapie + zielgerichtete Substanzen"/>
+            </concept>
+            
+            <concept>
+                <code value="SZ"/>
+                <display value="Stammzelltransplantation (inkl. Knochenmarktransplantation)"/>
+            </concept>
+            
+            <concept>
+                <code value="WW"/>
+                <display value="Watchful Waiting"/>
             </concept>
         </include>
     </compose>

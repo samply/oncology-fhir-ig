@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>EndeGrund </b>
+            </p>
+            <p>Gibt den Grund an, warum die Strahlentherapie beendet wurde.</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/EndeGrund"/>
+    <version value="1.0.0"/>
+    <name value="EndeGrund"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Gibt den Grund an, warum die Strahlentherapie beendet wurde."/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="8"/>
+    <concept>
+        <code value="E"/>
+        <display value="Reguläres Ende"/>
+    </concept>
+    <concept>
+        <code value="F"/>
+        <display value="Zieldosis erreicht mit Unterbrechung > 3 Kalendertage"/>
+    </concept>
+    <concept>
+        <code value="A"/>
+        <display value="Abbruch wegen Nebenwirkungen"/>
+    </concept>
+    <concept>
+        <code value="P"/>
+        <display value="Abbruch wegen Progress"/>
+    </concept>
+    <concept>
+        <code value="S"/>
+        <display value="Abbruch aus sonstigen Gründen"/>
+    </concept>
+    <concept>
+        <code value="V"/>
+        <display value="Patient verweigert weitere Therapie"/>
+    </concept>
+    <concept>
+        <code value="T"/>
+        <display value="Patient verstorben"/>
+    </concept>
+    <concept>
+        <code value="U"/>
+        <display value="unbekannt"/>
+    </concept>
+
+</CodeSystem>

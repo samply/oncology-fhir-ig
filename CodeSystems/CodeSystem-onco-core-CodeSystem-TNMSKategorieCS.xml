@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>TNMSKategorie </b>
+            </p>
+            <p>Perineuralinvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM.</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMSKategorie"/>
+    <version value="1.0.0" />
+    <name value="TNMSKategorie"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Perineuralinvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM."/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="5"/>
+    <concept>
+    <code value="SX"/>
+    <display value="SX"/>
+</concept>
+<concept>
+    <code value="S0"/>
+    <display value="S0"/>
+</concept>
+<concept>
+    <code value="S1"/>
+    <display value="S1"/>
+</concept>
+<concept>
+    <code value="S2"/>
+    <display value="S2"/>
+</concept>
+<concept>
+    <code value="S3"/>
+    <display value="S3"/>
+</concept>
+
+</CodeSystem>

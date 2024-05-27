@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Veneninvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM. ValueSet</b>
+            </p>
+            <p>Veneninvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM.</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMVKategorieVS"/>
+    <version value="1.0.0" />
+    <name value="TNMVKategorieVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Veneninvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM."/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMVKategorieCS"/>
+            <concept>
+    <code value="VX"/>
+    <display value="Veneninvasion kann nicht beurteilt werden"/>
+</concept>
+<concept>
+    <code value="V0"/>
+    <display value="Keine Veneninvasion"/>
+</concept>
+<concept>
+    <code value="V1"/>
+    <display value="Mikroskopische Veneninvasion"/>
+</concept>
+<concept>
+    <code value="V2"/>
+    <display value="Makroskopische Veneninvasion"/>
+</concept>
+
+        </include>
+    </compose>
+</ValueSet>

@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Zielgebiet </b>
+            </p>
+            <p>Zielgebietschlüssel nach oBDS 2021</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/Zielgebiet"/>
+    <version value="1.0.0"/>
+    <name value="Zielgebiet"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Zielgebietschlüssel nach oBDS 2021"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="248"/>
+    <concept>
+        <code value="1.1"/>
+        <display value="Ganzhirn (Neurokranium, inklusive Meningen)"/>
+    </concept>
+    <concept>
+        <code value="1.2"/>
+        <display value="Teilhirn (frontal/parietal/occipital/temporal/Kleinhirn)"/>
+    </concept>
+    <concept>
+        <code value="1.3"/>
+        <display value="Neuroachse/Rückenmark"/>
+    </concept>
+    <concept>
+        <code value="1.4"/>
+        <display value="Hypophyse"/>
+    </concept>
+    <concept>
+        <code value="1.5"/>
+        <display value="Hirn sonstiges"/>
+    </concept>
+    <concept>
+        <code value="2.1"/>
+        <display value="Auge (r, l)"/>
+    </concept>
+    <concept>
+        <code value="2.2"/>
+        <display value="Nase/Nasennebenhöhle"/>
+    </concept>
+    <concept>
+        <code value="2.3"/>
+        <display value="Mundhöhle inklusive Mundhöhlenvorhof"/>
+    </concept>
+    <concept>
+        <code value="2.4"/>
+        <display value="Ohr (r, l)"/>
+    </concept>
+    <concept>
+        <code value="2.5"/>
+        <display value="Speicheldrüse (r, l)"/>
+    </concept>
+    <concept>
+        <code value="2.6"/>
+        <display value="Pharynx"/>
+    </concept>
+    <concept>
+        <code value="2.7"/>
+        <display value="Nasopharynx"/>
+    </concept>
+    <concept>
+        <code value="2.8"/>
+        <display value="Oropharynx"/>
+    </concept>
+    <concept>
+        <code value="2.9"/>
+        <display value="Hypopharynx"/>
+    </concept>
+    <concept>
+        <code value="2.10"/>
+        <display value="Larynx"/>
+    </concept>
+    <concept>
+        <code value="2.11"/>
+        <display value="Schilddrüse"/>
+    </concept>
+    <concept>
+        <code value="2.12"/>
+        <display value="Kopf-Hals sonstige"/>
+    </concept>
+    <concept>
+        <code value="3.1"/>
+        <display value="Mamma als Ganzbrust (r, l)"/>
+    </concept>
+    <concept>
+        <code value="3.2"/>
+        <display value="Mamma als Teilbrust (r, l)"/>
+    </concept>
+    <concept>
+        <code value="3.3"/>
+        <display value="Thoraxwand, gegebenenfalls r, l"/>
+    </concept>
+    <concept>
+        <code value="3.4"/>
+        <display value="Lunge (r, l)"/>
+    </concept>
+    <concept>
+        <code value="3.5"/>
+        <display value="Ösophagus"/>
+    </concept>
+    <concept>
+        <code value="3.6"/>
+        <display value="Mediastinum (mediastinaler Lymphabfluss ist in Nummer 9 zu kodieren)"/>
+    </concept>
+    <concept>
+        <code value="3.7"/>
+        <display value="Thymus"/>
+    </concept>
+    <concept>
+        <code value="3.8"/>
+        <display value="Thorax sonstige"/>
+    </concept>
+    <concept>
+        <code value="4.1"/>
+        <display value="Magen"/>
+    </concept>
+    <concept>
+        <code value="4.2"/>
+        <display value="Pankreas"/>
+    </concept>
+    <concept>
+        <code value="4.3"/>
+        <display value="Leber, auch bei Teilbestrahlung"/>
+    </concept>
+    <concept>
+        <code value="4.4"/>
+        <display value="Milz"/>
+    </concept>
+    <concept>
+        <code value="4.5"/>
+        <display value="Niere (r, l)"/>
+    </concept>
+    <concept>
+        <code value="4.6"/>
+        <display value="Nebenniere (r, l)"/>
+    </concept>
+    <concept>
+        <code value="4.7"/>
+        <display value="Retroperitoneum (z. B. Sarkome)"/>
+    </concept>
+    <concept>
+        <code value="4.8"/>
+        <display value="Ureter (r, l)"/>
+    </concept>
+    <concept>
+        <code value="4.9"/>
+        <display value="Bauchwand (z. B. Sarkome)"/>
+    </concept>
+    <concept>
+        <code value="4.10"/>
+        <display value="Oberbauch"/>
+    </concept>
+    <concept>
+        <code value="4.11"/>
+        <display value="Gallengänge"/>
+    </concept>
+    <concept>
+        <code value="4.12"/>
+        <display value="Gallenblase"/>
+    </concept>
+    <concept>
+        <code value="4.13"/>
+        <display value="Abdomen sonstige"/>
+    </concept>
+    <concept>
+        <code value="5.1"/>
+        <display value="Rektum"/>
+    </concept>
+    <concept>
+        <code value="5.2"/>
+        <display value="Analbereich"/>
+    </concept>
+    <concept>
+        <code value="5.3"/>
+        <display value="Harnblase"/>
+    </concept>
+    <concept>
+        <code value="5.4"/>
+        <display value="Prostata"/>
+    </concept>
+    <concept>
+        <code value="5.5"/>
+        <display value="Hoden (r, l)"/>
+    </concept>
+    <concept>
+        <code value="5.6"/>
+        <display value="Penis"/>
+    </concept>
+    <concept>
+        <code value="5.7"/>
+        <display value="Uterus"/>
+    </concept>
+    <concept>
+        <code value="5.8"/>
+        <display value="Zervix"/>
+    </concept>
+    <concept>
+        <code value="5.9"/>
+        <display value="Vulva"/>
+    </concept>
+    <concept>
+        <code value="5.10"/>
+        <display value="Vagina"/>
+    </concept>
+    <concept>
+        <code value="5.11"/>
+        <display value="Beckenwand"/>
+    </concept>
+    <concept>
+        <code value="5.12"/>
+        <display value="Becken sonstige"/>
+    </concept>
+    <concept>
+        <code value="6.1"/>
+        <display value="Schädel"/>
+    </concept>
+    <concept>
+        <code value="6.2"/>
+        <display value="Schädelbasis"/>
+    </concept>
+    <concept>
+        <code value="6.3"/>
+        <display value="Orbita (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.4"/>
+        <display value="Halswirbelsäule"/>
+    </concept>
+    <concept>
+        <code value="6.5"/>
+        <display value="Brustwirbelsäule"/>
+    </concept>
+    <concept>
+        <code value="6.6"/>
+        <display value="Lendenwirbelsäule"/>
+    </concept>
+    <concept>
+        <code value="6.7"/>
+        <display value="Sacrum/Coccygeum"/>
+    </concept>
+    <concept>
+        <code value="6.8"/>
+        <display value="Rippen (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.9"/>
+        <display value="Sternum"/>
+    </concept>
+    <concept>
+        <code value="6.10"/>
+        <display value="Schulter (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.11"/>
+        <display value="Oberarm (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.12"/>
+        <display value="Unterarm (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.13"/>
+        <display value="Hand (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.14"/>
+        <display value="Becken (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.15"/>
+        <display value="Hüfte (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.16"/>
+        <display value="Oberschenkel (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.17"/>
+        <display value="Unterschenkel (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.18"/>
+        <display value="Fuß (r, l)"/>
+    </concept>
+    <concept>
+        <code value="6.19"/>
+        <display value="Knochen sonstige"/>
+    </concept>
+    <concept>
+        <code value="7.1"/>
+        <display value="Kopf, Gesicht, Hals"/>
+    </concept>
+    <concept>
+        <code value="7.2"/>
+        <display value="obere Extremität inklusive Schulter (r, l)"/>
+    </concept>
+    <concept>
+        <code value="7.3"/>
+        <display value="untere Extremität und Hüfte (r, l)"/>
+    </concept>
+    <concept>
+        <code value="7.4"/>
+        <display value="Thorax"/>
+    </concept>
+    <concept>
+        <code value="7.5"/>
+        <display value="Abdomen"/>
+    </concept>
+    <concept>
+        <code value="7.6"/>
+        <display value="Becken"/>
+    </concept>
+    <concept>
+        <code value="7.7"/>
+        <display value="Stammes o. n. A."/>
+    </concept>
+    <concept>
+        <code value="7.8"/>
+        <display value="mehrere Bereiche überlappend"/>
+    </concept>
+    <concept>
+        <code value="7.9"/>
+        <display value="sonstige Weichteile o. n. A."/>
+    </concept>
+    <concept>
+        <code value="8.1"/>
+        <display value="Ganzhaut"/>
+    </concept>
+    <concept>
+        <code value="8.2"/>
+        <display value="Teilbereiche"/>
+    </concept>
+    <concept>
+        <code value="9.1"/>
+        <display value="Cervikale Lymphknoten (r, l)"/>
+    </concept>
+    <concept>
+        <code value="9.2"/>
+        <display value="Supra-/infraclavikuläre Lymphknoten (r, l)"/>
+    </concept>
+    <concept>
+        <code value="9.3"/>
+        <display value="Axilläre Lymphknoten (r, l)"/>
+    </concept>
+    <concept>
+        <code value="9.4"/>
+        <display value="Retrosternale/sternale/Mammaria interna Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="9.5"/>
+        <display value="Mediastinale Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="9.6"/>
+        <display value="Hiläre Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="9.7"/>
+        <display
+            value="Intraabdominale Lymphknoten (z. B. subphrenisch, perigastrisch, peripankreatisch, Leber-, Milzhilus)"
+        />
+    </concept>
+    <concept>
+        <code value="9.8"/>
+        <display value="Paraaortale/paracavale Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="9.9"/>
+        <display value="Retroperitoneale Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="9.10"/>
+        <display
+            value="Beckenlymphabfluss (r, l) (Iliakal commun, extern, intern, obturatorisch, präsakral)"
+        />
+    </concept>
+    <concept>
+        <code value="9.11"/>
+        <display value="Inguinale Lymphknoten (r, l)"/>
+    </concept>
+    <concept>
+        <code value="9.12"/>
+        <display value="Involved Node"/>
+    </concept>
+    <concept>
+        <code value="9.13"/>
+        <display value="Involved Site"/>
+    </concept>
+    <concept>
+        <code value="9.14"/>
+        <display value="Involved Field"/>
+    </concept>
+    <concept>
+        <code value="9.15"/>
+        <display value="Sonstige Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="10.1"/>
+        <display value="Ganzkörperbestrahlung bei allogener Stammzelltransplantation"/>
+    </concept>
+    <concept>
+        <code value="10.2"/>
+        <display value="operative Zugangswege"/>
+    </concept>
+    <concept>
+        <code value="10.3"/>
+        <display value="Sonstige, nicht genannte Zielgebiete"/>
+    </concept>
+    <concept>
+        <code value="1."/>
+        <display value="ZNS"/>
+    </concept>
+    <concept>
+        <code value="1.1."/>
+        <display value="Ganzhirn"/>
+    </concept>
+    <concept>
+        <code value="1.2."/>
+        <display value="Teilhirn"/>
+    </concept>
+    <concept>
+        <code value="1.3."/>
+        <display value="Neuroachse"/>
+    </concept>
+    <concept>
+        <code value="2."/>
+        <display value="Kopf-Hals"/>
+    </concept>
+    <concept>
+        <code value="2.+"/>
+        <display value="Kopf-Hals mit Lk"/>
+    </concept>
+    <concept>
+        <code value="2.-"/>
+        <display value="Kopf-Hals ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="2.1."/>
+        <display value="Orbita, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="2.1.+"/>
+        <display value="Orbita mit Lk"/>
+    </concept>
+    <concept>
+        <code value="2.1.-"/>
+        <display value="Orbita ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="2.2."/>
+        <display value="Nase/ Nasennebenhöhle, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="2.2.+"/>
+        <display value="Nase/ Nasennebenhöhle mit Lk"/>
+    </concept>
+    <concept>
+        <code value="2.2.-"/>
+        <display value="Nase/ Nasennebenhöhle ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="2.3."/>
+        <display value="Mundhöhle, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="2.3.+"/>
+        <display value="Mundhöhle mit Lk"/>
+    </concept>
+    <concept>
+        <code value="2.3.-"/>
+        <display value="Mundhöhle ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="2.4."/>
+        <display value="Ohr, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="2.4.+"/>
+        <display value="Ohr mit Lk"/>
+    </concept>
+    <concept>
+        <code value="2.4.-"/>
+        <display value="Ohr ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="2.5."/>
+        <display value="Speicheldrüse, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="2.5.+"/>
+        <display value="Speicheldrüse mit Lk"/>
+    </concept>
+    <concept>
+        <code value="2.5.-"/>
+        <display value="Speicheldrüse ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="2.6."/>
+        <display value="Pharynx, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="2.6.+"/>
+        <display value="Pharynx mit Lk"/>
+    </concept>
+    <concept>
+        <code value="2.6.-"/>
+        <display value="Pharynx ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="2.7."/>
+        <display value="Larynx, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="2.7.+"/>
+        <display value="Larynx mit Lk"/>
+    </concept>
+    <concept>
+        <code value="2.7.-"/>
+        <display value="Larynx ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="2.8."/>
+        <display value="Schilddrüse, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="2.8.+"/>
+        <display value="Schilddrüse mit Lk"/>
+    </concept>
+    <concept>
+        <code value="2.8.-"/>
+        <display value="Schilddrüse ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="2.9."/>
+        <display value="Halslymphknoten"/>
+    </concept>
+    <concept>
+        <code value="3."/>
+        <display value="Thorax"/>
+    </concept>
+    <concept>
+        <code value="3.+"/>
+        <display value="Thorax mit Lk"/>
+    </concept>
+    <concept>
+        <code value="3.-"/>
+        <display value="Thorax ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="3.1."/>
+        <display value="Mamma als Ganzbrust, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="3.1.+"/>
+        <display value="Mamma als Ganzbrust mit Lk"/>
+    </concept>
+    <concept>
+        <code value="3.1.-"/>
+        <display value="Mamma als Ganzbrust ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="3.2."/>
+        <display value="Mamma als Teilbrust, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="3.2.+"/>
+        <display value="Mamma als Teilbrust mit Lk"/>
+    </concept>
+    <concept>
+        <code value="3.2.-"/>
+        <display value="Mamma als Teilbrust ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="3.3."/>
+        <display value="Brustwand"/>
+    </concept>
+    <concept>
+        <code value="3.3.+"/>
+        <display value="Brustwand mit Lk"/>
+    </concept>
+    <concept>
+        <code value="3.3.-"/>
+        <display value="Brustwand ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="3.4."/>
+        <display value="Lunge, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="3.4.+"/>
+        <display value="Lunge mit Lk"/>
+    </concept>
+    <concept>
+        <code value="3.4.-"/>
+        <display value="Lunge ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="3.5."/>
+        <display value="Ösophagus, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="3.5.+"/>
+        <display value="Ösophagus mit Lk"/>
+    </concept>
+    <concept>
+        <code value="3.5.-"/>
+        <display value="Ösophagus ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="3.6."/>
+        <display value="Thymus, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="3.6.+"/>
+        <display value="Thymus mit Lk"/>
+    </concept>
+    <concept>
+        <code value="3.6.-"/>
+        <display value="Thymus ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="3.7."/>
+        <display value="Mediastinale Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="4."/>
+        <display value="Abdomen (ohne Becken)"/>
+    </concept>
+    <concept>
+        <code value="4.+"/>
+        <display value="Abdomen (ohne Becken) mit Lk"/>
+    </concept>
+    <concept>
+        <code value="4.-"/>
+        <display value="Abdomen (ohne Becken) ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="4.1."/>
+        <display value="Magen, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="4.1.+"/>
+        <display value="Magen mit Lk"/>
+    </concept>
+    <concept>
+        <code value="4.1.-"/>
+        <display value="Magen ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="4.2."/>
+        <display value="Pankreas, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="4.2.+"/>
+        <display value="Pankreas mit Lk"/>
+    </concept>
+    <concept>
+        <code value="4.2.-"/>
+        <display value="Pankreas ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="4.3."/>
+        <display value="Leber, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="4.3.+"/>
+        <display value="Leber mit Lk"/>
+    </concept>
+    <concept>
+        <code value="4.3.-"/>
+        <display value="Leber ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="4.4."/>
+        <display value="Milz, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="4.4.+"/>
+        <display value="Milz mit Lk"/>
+    </concept>
+    <concept>
+        <code value="4.4.-"/>
+        <display value="Milz ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="4.5."/>
+        <display value="Niere, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="4.5.+"/>
+        <display value="Niere mit Lk"/>
+    </concept>
+    <concept>
+        <code value="4.5.-"/>
+        <display value="Niere ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="4.6."/>
+        <display value="Nebenniere, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="4.6.+"/>
+        <display value="Nebenniere mit Lk"/>
+    </concept>
+    <concept>
+        <code value="4.6.-"/>
+        <display value="Nebenniere ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="4.7."/>
+        <display value="Retroperitoneale Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="4.8."/>
+        <display value="Retroperitoneum, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="4.8.+"/>
+        <display value="Retroperitoneum mit Lk"/>
+    </concept>
+    <concept>
+        <code value="4.8.-"/>
+        <display value="Retroperitoneum ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="4.9."/>
+        <display value="Bauchwand, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="4.9.+"/>
+        <display value="Bauchwand mit Lk"/>
+    </concept>
+    <concept>
+        <code value="4.9.-"/>
+        <display value="Bauchwand ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5."/>
+        <display value="Becken"/>
+    </concept>
+    <concept>
+        <code value="5.+"/>
+        <display value="Becken mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.-"/>
+        <display value="Becken ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.1."/>
+        <display value="Rektum, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.1.+"/>
+        <display value="Rektum mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.1.-"/>
+        <display value="Rektum ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.2."/>
+        <display value="Analbereich, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.2.-"/>
+        <display value="Analbereich ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.2.+"/>
+        <display value="Analbereich mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.3."/>
+        <display value="Harnblase, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.3.-"/>
+        <display value="Harnblase ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.3.+"/>
+        <display value="Harnblase mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.4."/>
+        <display value="Prostata, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.4.+"/>
+        <display value="Prostata mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.4.-"/>
+        <display value="Prostata ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.5."/>
+        <display value="Hoden, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.5.+"/>
+        <display value="Hoden mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.5.-"/>
+        <display value="Hoden ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.6."/>
+        <display value="Penis, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.6.+"/>
+        <display value="Penis mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.6.-"/>
+        <display value="Penis ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.7."/>
+        <display value="Uterus und Zervix, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.7.+"/>
+        <display value="Uterus und Zervix mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.7.2.-"/>
+        <display value="Zervix ohne Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="5.7.2.+"/>
+        <display value="Zervix mit Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="5.7.2."/>
+        <display value="Zervix"/>
+    </concept>
+    <concept>
+        <code value="5.7.1.-"/>
+        <display value="Uterus ohne Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="5.7.1.+"/>
+        <display value="Uterus mit Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="5.7.1."/>
+        <display value="Uterus"/>
+    </concept>
+    <concept>
+        <code value="5.7.-"/>
+        <display value="Uterus und Zervix ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.8."/>
+        <display value="Ovar, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.8.-"/>
+        <display value="Ovar ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.8.+"/>
+        <display value="Ovar mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.9."/>
+        <display value="Vulva, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.9.-"/>
+        <display value="Vulva ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.9.+"/>
+        <display value="Vulva mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.10."/>
+        <display value="Vagina, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.10.+"/>
+        <display value="Vagina mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.10.-"/>
+        <display value="Vagina ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.11."/>
+        <display value="Beckenwand, o.n.A."/>
+    </concept>
+    <concept>
+        <code value="5.11.+"/>
+        <display value="Beckenwand mit Lk"/>
+    </concept>
+    <concept>
+        <code value="5.11.-"/>
+        <display value="Beckenwand ohne Lk"/>
+    </concept>
+    <concept>
+        <code value="5.12."/>
+        <display value="Beckenlymphkn. (ohne Primtu.)"/>
+    </concept>
+    <concept>
+        <code value="6."/>
+        <display value="Stütz-/Bewegungsapparat"/>
+    </concept>
+    <concept>
+        <code value="6.1."/>
+        <display value="Schädelknochen"/>
+    </concept>
+    <concept>
+        <code value="6.2."/>
+        <display value="Rippen"/>
+    </concept>
+    <concept>
+        <code value="6.3."/>
+        <display value="Sternum"/>
+    </concept>
+    <concept>
+        <code value="6.4."/>
+        <display value="HWS"/>
+    </concept>
+    <concept>
+        <code value="6.5."/>
+        <display value="BWS"/>
+    </concept>
+    <concept>
+        <code value="6.6."/>
+        <display value="LWS"/>
+    </concept>
+    <concept>
+        <code value="6.7."/>
+        <display value="knöchernes Becken"/>
+    </concept>
+    <concept>
+        <code value="6.8."/>
+        <display value="Hüfte"/>
+    </concept>
+    <concept>
+        <code value="6.9."/>
+        <display value="Achsel"/>
+    </concept>
+    <concept>
+        <code value="6.10."/>
+        <display value="Oberarm"/>
+    </concept>
+    <concept>
+        <code value="6.11."/>
+        <display value="Unterarm"/>
+    </concept>
+    <concept>
+        <code value="6.12."/>
+        <display value="Hand"/>
+    </concept>
+    <concept>
+        <code value="6.13."/>
+        <display value="Leiste"/>
+    </concept>
+    <concept>
+        <code value="6.14."/>
+        <display value="Oberschenkel"/>
+    </concept>
+    <concept>
+        <code value="6.15."/>
+        <display value="Unterschenkel"/>
+    </concept>
+    <concept>
+        <code value="6.16."/>
+        <display value="Fuß"/>
+    </concept>
+    <concept>
+        <code value="7."/>
+        <display value="Haut"/>
+    </concept>
+    <concept>
+        <code value="7.+"/>
+        <display value="Haut mit Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="7.-"/>
+        <display value="Haut ohne Lymphknoten"/>
+    </concept>
+    <concept>
+        <code value="7.1."/>
+        <display value="Primärer Hauttumor"/>
+    </concept>
+    <concept>
+        <code value="7.2."/>
+        <display value="Hautmetastasen"/>
+    </concept>
+    <concept>
+        <code value="8."/>
+        <display value="Sonstiges"/>
+    </concept>
+    <concept>
+        <code value="8.1."/>
+        <display value="Ganzkörperbestrahlung"/>
+    </concept>
+    <concept>
+        <code value="8.2."/>
+        <display value="Mantelfeldbestrahlung"/>
+    </concept>
+
+</CodeSystem>

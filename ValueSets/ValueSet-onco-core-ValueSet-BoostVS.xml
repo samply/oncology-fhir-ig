@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>ja, mit Boost o. n. A. ValueSet</b>
+            </p>
+            <p>ja, mit Boost o. n. A.</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/BoostVS"/>
+    <version value="1.0.0"/>
+    <name value="BoostVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="ja, mit Boost o. n. A."/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/BoostCS"/>
+            <concept>
+                <code value="J"/>
+                <display value="ja, mit Boost o. n. A."/>
+            </concept>
+            <concept>
+                <code value="SIB"/>
+                <display value="simultan integrierter Boost"/>
+            </concept>
+            <concept>
+                <code value="SEQ"/>
+                <display value="sequentieller Boost"/>
+            </concept>
+            <concept>
+                <code value="KON"/>
+                <display value="konkomitanter Boost"/>
+            </concept>
+            <concept>
+                <code value="N"/>
+                <display value="nein, ohne Boost"/>
+            </concept>
+
+        </include>
+    </compose>
+</ValueSet>

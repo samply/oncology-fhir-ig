@@ -95,7 +95,7 @@
         <identity value="ISO-11179" />
         <map value="urn:adt:dataelement:105:1" />
       </mapping>
-      </element>
+    </element>
     <element id="Observation.value[x].coding:todTumorbedingt">
       <path value="Observation.value[x].coding" />
       <sliceName value="todTumorbedingt" />
@@ -113,7 +113,7 @@
       <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/JNUCS" />
       <mustSupport value="true" />
     </element>
-  <element id="Observation.value[x].coding:todTumorbedingt.code">
+    <element id="Observation.value[x].coding:todTumorbedingt.code">
       <path value="Observation.value[x].coding.code" />
       <min value="1" />
       <mustSupport value="true" />

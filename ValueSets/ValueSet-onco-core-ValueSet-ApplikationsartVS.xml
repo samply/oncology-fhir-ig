@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <b>Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wird. ValueSet</b>
+            </p>
+            <p>Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wird.</p>
+        </div>
+    </text>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/ApplikationsartVS"/>
+    <version value="1.0.0"/>
+    <name value="ApplikationsartVS"/>
+    <status value="active"/>
+    <publisher value="DKTK"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://dktk.dkfz.de"/>
+        </telecom>
+    </contact>
+    <description value="Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wird."/>
+    <compose>
+        <include>
+            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/ApplikationsartCS"/>
+            <concept>
+                <code value="P"/>
+                <display value="Perkutan (Teletherapie)"/>
+            </concept>
+            <concept>
+                <code value="PRCJ"/>
+                <display value="Perkutan (Teletherapie) "/>
+            </concept>
+            <concept>
+                <code value="PRCN"/>
+                <display value="Perkutan (Teletherapie) "/>
+            </concept>
+            <concept>
+                <code value="K"/>
+                <display value="Endokavitäre Kontakttherapie (Brachytherapie)"/>
+            </concept>
+            <concept>
+                <code value="KHDR"/>
+                <display
+                    value="Endokavitäre Kontakttherapie (Brachytherapie) high dose rate therapy"/>
+            </concept>
+            <concept>
+                <code value="KPDR"/>
+                <display
+                    value="Endokavitäre Kontakttherapie (Brachytherapie) pulsed dose rate therapy"/>
+            </concept>
+            <concept>
+                <code value="KLDR"/>
+                <display value="Endokavitäre Kontakttherapie (Brachytherapie) low dose rate therapy"
+                />
+            </concept>
+            <concept>
+                <code value="I"/>
+                <display value="Interstitielle Kontakttherapie (Brachytherapie)"/>
+            </concept>
+            <concept>
+                <code value="IHDR"/>
+                <display
+                    value="Interstitielle Kontakttherapie (Brachytherapie) high dose rate therapy"/>
+            </concept>
+            <concept>
+                <code value="IPDR"/>
+                <display
+                    value="Interstitielle Kontakttherapie (Brachytherapie) pulsed dose rate therapy"
+                />
+            </concept>
+            <concept>
+                <code value="ILDR"/>
+                <display
+                    value="Interstitielle Kontakttherapie (Brachytherapie) low dose rate therapy"/>
+            </concept>
+            <concept>
+                <code value="M"/>
+                <display value="Metabolische Therapie (Radionuklide)"/>
+            </concept>
+            <concept>
+                <code value="MSIRT"/>
+                <display
+                    value="Metabolische Therapie (Radionuklide) Selektive Interne Radio-Therapie"/>
+            </concept>
+            <concept>
+                <code value="MPRRT"/>
+                <display value="Metabolische Therapie (Radionuklide) Peptid-Radio-Rezeptor-Therapie"
+                />
+            </concept>
+            <concept>
+                <code value="S"/>
+                <display value="Sonstiges"/>
+            </concept>
+            <concept>
+                <code value="RCJ"/>
+                <display value="mit Chemotherapie/Sensitizer"/>
+            </concept>
+            <concept>
+                <code value="RCN"/>
+                <display value="ohne Chemotherapie/Sensitizer"/>
+            </concept>
+            <concept>
+                <code value="ST"/>
+                <display value="stereotaktisch"/>
+            </concept>
+            <concept>
+                <code value="4D"/>
+                <display value="atemgetriggert"/>
+            </concept>
+            <concept>
+                <code value="HDR"/>
+                <display value="high dose rate therapy"/>
+            </concept>
+            <concept>
+                <code value="LDR"/>
+                <display value="low dose rate therapy"/>
+            </concept>
+            <concept>
+                <code value="PDR"/>
+                <display value="pulsed dose rate therapy"/>
+            </concept>
+            <concept>
+                <code value="SIRT"/>
+                <display value="selektive interne Radio-Therapie"/>
+            </concept>
+            <concept>
+                <code value="PRRT"/>
+                <display value="Peptid-Radio-Rezeptor-Therapie"/>
+            </concept>
+            <concept>
+                <code value="PSMA"/>
+                <display value="PSMA-Therapie"/>
+            </concept>
+            <concept>
+                <code value="RJT"/>
+                <display value="Radiojod-Therapie"/>
+            </concept>
+            <concept>
+                <code value="RIT"/>
+                <display value="Radioimmun-Therapie"/>
+            </concept>
+
+        </include>
+    </compose>
+</ValueSet>

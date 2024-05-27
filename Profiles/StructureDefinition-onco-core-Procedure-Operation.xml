@@ -179,7 +179,7 @@
       <min value="1" />
       <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/GesamtbeurteilungResidualstatusCS" />
     </element>
-  <element id="Procedure.complication">
+    <element id="Procedure.complication">
       <path value="Procedure.complication" />
       <slicing>
         <discriminator>
@@ -208,7 +208,7 @@
     <element id="Procedure.complication:ADT-OPKomplikationen.coding.system">
       <path value="Procedure.complication.coding.system" />
       <min value="1" />
-      <fixedUri value="http://fhir.de/ValueSet/bfarm/icd-10-gm" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/OPKomplikationenCS" />
     </element>
     <element id="Procedure.complication:ADT-OPKomplikationen.coding.code">
       <path value="Procedure.complication.coding.code" />

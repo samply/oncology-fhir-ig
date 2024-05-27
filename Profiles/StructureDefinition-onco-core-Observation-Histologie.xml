@@ -182,11 +182,53 @@
     <element id="Observation.hasMember:Grading">
       <path value="Observation.hasMember" />
       <sliceName value="Grading" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Grading" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.hasMember:AnzahlUntersuchtenLymphknoten">
+      <path value="Observation.hasMember" />
+      <sliceName value="AnzahlUntersuchtenLymphknoten" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-AnzahlUntersuchtenLymphknoten" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    
+    <element id="Observation.hasMember:AnzahlBefallenenLymphknoten">
+      <path value="Observation.hasMember" />
+      <sliceName value="AnzahlBefallenenLymphknoten" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-AnzahlBefallenenLymphknoten" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    
+    <element id="Observation.hasMember:AnzahlUntersuchtenSentinelLymphknoten">
+      <path value="Observation.hasMember" />
+      <sliceName value="AnzahlUntersuchtenSentinelLymphknoten" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-AnzahlUntersuchtenSentinelLymphknoten" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    
+    <element id="Observation.hasMember:AnzahlBefallenenSentinelLymphknoten">
+      <path value="Observation.hasMember" />
+      <sliceName value="AnzahlBefallenenSentinelLymphknoten" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-AnzahlBefallenenSentinelLymphknoten" />
       </type>
       <mustSupport value="true" />
     </element>

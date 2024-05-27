@@ -441,5 +441,171 @@
       <path value="Observation.component.value[x].coding.code" />
       <min value="1" />
     </element>
+    
+    
+    
+    
+    <element id="Observation.component:TNM-L-Kategorie">
+      <path value="Observation.component" />
+      <sliceName value="TNM-L-Kategorie" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-L-Kategorie.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-L-Kategorie.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="33739-4" />
+    </element>
+    <element id="Observation.component:TNM-L-Kategorie.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-L-Kategorie" />
+      <definition value="Lymphgefäßinvasion" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM-L-Kategorie" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMLKategorieVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM-L-Kategorie" />
+        <comment value="TNM:TNM-L-Kategorie" />
+      </mapping>
+      
+    </element>
+    <element id="Observation.component:TNM-L-Kategorie.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    
+    <element id="Observation.component:TNM-V-Kategorie">
+      <path value="Observation.component" />
+      <sliceName value="TNM-V-Kategorie" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-V-Kategorie.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-V-Kategorie.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="33740-2" />
+    </element>
+    <element id="Observation.component:TNM-V-Kategorie.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-V-Kategorie" />
+      <definition value="Veneninvasion" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM-V-Kategorie" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMVKategorieVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM-V-Kategorie" />
+        <comment value="TNM:TNM-V-Kategorie" />
+      </mapping>
+      
+    </element>
+    <element id="Observation.component:TNM-V-Kategorie.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    
+    <element id="Observation.component:TNM-Pn-Kategorie">
+      <path value="Observation.component" />
+      <sliceName value="TNM-Pn-Kategorie" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-Pn-Kategorie.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-Pn-Kategorie.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="92837-4" />
+    </element>
+    <element id="Observation.component:TNM-Pn-Kategorie.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-Pn-Kategorie" />
+      <definition value="Perineuralinvasion" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM-Pn-Kategorie" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMPnKategorieVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM-Pn-Kategorie" />
+        <comment value="TNM:TNM-Pn-Kategorie" />
+      </mapping>
+      
+    </element>
+    <element id="Observation.component:TNM-Pn-Kategorie.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    
+    <element id="Observation.component:TNM-S-Kategorie">
+      <path value="Observation.component" />
+      <sliceName value="TNM-S-Kategorie" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-S-Kategorie.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-S-Kategorie.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="21924-6" />
+    </element>
+    <element id="Observation.component:TNM-S-Kategorie.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-S-Kategorie" />
+      <definition value="Serumtumormarker" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM-S-Kategorie" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMSKategorieVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM-S-Kategorie" />
+        <comment value="TNM:TNM-S-Kategorie" />
+      </mapping>
+      
+    </element>
+    <element id="Observation.component:TNM-S-Kategorie.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    
+    
+    
   </differential>
 </StructureDefinition>
