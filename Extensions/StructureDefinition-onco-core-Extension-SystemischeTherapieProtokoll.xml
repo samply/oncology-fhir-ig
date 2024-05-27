@@ -46,8 +46,8 @@
       </mapping>
       <mapping>
         <identity value="ISO-11179"/>
-        <map value="urn:dktk:dataelement:89:1"/>
-        <comment value="urn:dktk:dataelement:89:1"/>
+        <map value="urn:adt:dataelement:89:1"/>
+        <comment value="urn:adt:dataelement:89:1"/>
       </mapping>
     </element>
   </differential>

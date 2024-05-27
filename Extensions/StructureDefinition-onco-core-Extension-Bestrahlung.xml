@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Bestrahlung"/>
+  <version value="0.9.0" />
+  <name value="Bestrahlung"/>
+  <status value="active"/>
+  <description value=" Bestrahlung" />
+  <fhirVersion value="4.0.0"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Procedure"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Procedure"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Bestrahlung" />
+      <definition value="Einzelne Bestrahlungen innerhalb einer Gesamtstrahlentherapie" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+    </element>
+    <element id="Extension.extension:Applikationsart">
+      <path value="Extension.extension" />
+      <sliceName value="Applikationsart" />
+      <short value="Strahlentherapie Applikationsart" />
+      <definition value="Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wurde." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:Applikationsart.extension">
+      <path value="Extension.extension.extension" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:Applikationsart.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="Applikationsart" />
+    </element>
+    <element id="Extension.extension:Applikationsart.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/ApplikationsartVS" />
+      </binding>
+    </element>
+    <element id="Extension.extension:Strahlenart">
+      <path value="Extension.extension" />
+      <sliceName value="Strahlenart" />
+      <short value="Strahlentherapie Strahlenart" />
+      <definition value="Angewandte Strahlenart." />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:Strahlenart.extension">
+      <path value="Extension.extension.extension" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:Strahlenart.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="Strahlenart" />
+    </element>
+    <element id="Extension.extension:Strahlenart.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/StrahlenartVS" />
+      </binding>
+    </element>
+    <element id="Extension.extension:Zielgebiet">
+      <path value="Extension.extension" />
+      <sliceName value="Zielgebiet" />
+      <short value="Strahlentherapie Zielgebiet" />
+      <definition value="Gibt an, an welcher anatomischen Region die Bestrahlung durchgeführt wurde." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:Zielgebiet.extension">
+      <path value="Extension.extension.extension" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:Zielgebiet.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="Zielgebiet" />
+    </element>
+    <element id="Extension.extension:Zielgebiet.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/ZielgebietVS" />
+      </binding>
+    </element>
+    <element id="Extension.extension:SeiteZielgebiet">
+      <path value="Extension.extension" />
+      <sliceName value="SeiteZielgebiet" />
+      <short value="Seitenlokalisation Zielgebietes" />
+      <definition value="Gibt Seitenlokalisation des Zielgebietes an." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:SeiteZielgebiet.extension">
+      <path value="Extension.extension.extension" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:SeiteZielgebiet.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="SeiteZielgebiet" />
+    </element>
+    <element id="Extension.extension:SeiteZielgebiet.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SeitenlokalisationVS" />
+      </binding>
+    </element>
+    <element id="Extension.extension:Gesamtdosis">
+      <path value="Extension.extension" />
+      <sliceName value="Gesamtdosis" />
+      <short value="Strahlentherapie Gesamtdosis" />
+      <definition value="Gibt an, mit welcher Gesamtdosis da Zielgebiet bestrahlt wurde (inklusive Boost)." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:Gesamtdosis.extension">
+      <path value="Extension.extension.extension" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:Gesamtdosis.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="Gesamtdosis" />
+    </element>
+    <element id="Extension.extension:Gesamtdosis.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="Extension.extension:Gesamtdosis.value[x].unit">
+      <path value="Extension.extension.value[x].unit" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/StrahlungseinheitVS" />
+      </binding>
+    </element>
+    <element id="Extension.extension:Einzeldosis">
+      <path value="Extension.extension" />
+      <sliceName value="Einzeldosis" />
+      <short value="Strahlentherapie Einzeldosis pro Tag (Dosis)" />
+      <definition value="Gibt an, mit welcher Einzeldosis (häufigste Dosis, nicht Boost) pro Tag das Zielgebiet bestrahlt wurde." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:Einzeldosis.extension">
+      <path value="Extension.extension.extension" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:Einzeldosis.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="Einzeldosis" />
+    </element>
+    <element id="Extension.extension:Einzeldosis.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="Extension.extension:Einzeldosis.value[x].unit">
+      <path value="Extension.extension.value[x].unit" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/StrahlungseinheitVS" />
+      </binding>
+    </element>
+    <element id="Extension.extension:Boost">
+      <path value="Extension.extension" />
+      <sliceName value="Boost" />
+      <short value="Strahlentherapie Boost" />
+      <definition value="Angabe, ob ein Boost und falls ja, welche Art von Boost appliziert wurde." />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Extension.extension:Boost.extension">
+      <path value="Extension.extension.extension" />
+      <max value="0" />
+    </element>
+    <element id="Extension.extension:Boost.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="Boost" />
+    </element>
+    <element id="Extension.extension:Boost.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/BoostVS" />
+      </binding>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Bestrahlung" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
