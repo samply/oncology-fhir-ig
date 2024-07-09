@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+  <version value="0.9.0" />
+  <name value="Patient" />
+  <status value="active" />
+  <description value="Ermittlung der Patientenstammdaten" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <short value="Geschlecht" />
+      <definition value="Das Geschlecht des Patienten" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Patienten_Stammdaten:Patienten_Geschlecht" />
+        <comment value="Patienten_Stammdaten:Patienten_Geschlecht" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:1:3" />
+        <comment value="urn:dktk:dataelement:1:3" />
+      </mapping>
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <short value="Geburtsdatum" />
+      <definition value="Das Geburtsdatum des Patienten" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Patienten_Stammdaten:Patienten_Geburtsdatum" />
+        <comment value="Patienten_Stammdaten:Patienten_Geburtsdatum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:26:4" />
+        <comment value="urn:dktk:dataelement:26:4" />
+      </mapping>
+    </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.deceased[x]:deceasedDateTime">
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Patient.deceased[x]:deceasedBoolean">
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus" />
+      <max value="0" />
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <path value="Patient.multipleBirth[x]" />
+      <max value="0" />
+    </element>
+    <element id="Patient.photo">
+      <path value="Patient.photo" />
+      <max value="0" />
+    </element>
+    <element id="Patient.communication">
+      <path value="Patient.communication" />
+      <max value="0" />
+    </element>
+    <element id="Patient.generalPractitioner">
+      <path value="Patient.generalPractitioner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.link">
+      <path value="Patient.link" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

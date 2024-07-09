@@ -9,9 +9,9 @@
             <p>Lymphgefäßinvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMLKategorie"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMLKategorieCS"/>
     <version value="1.0.0" />
-    <name value="TNMLKategorie"/>
+    <name value="TNMLKategorieCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>

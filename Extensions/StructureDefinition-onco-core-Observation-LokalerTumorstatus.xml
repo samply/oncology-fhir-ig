@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokalerTumorstatus" />
+  <version value="0.9.0" />
+  <name value="LokalerTumorstatus" />
+  <status value="active"/>
+  <description value="Beurteilung der Situation im Primärtumorbereich."/>
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category.coding.system">
+      <path value="Observation.category.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/observation-category" />
+    </element>
+    <element id="Observation.category.coding.code">
+      <path value="Observation.category.coding.code" />
+      <min value="1" />
+      <fixedCode value="imaging" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="LA4583-6" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.encounter">
+      <path value="Observation.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Datum lokales oder regionäres Rezidiv" />
+      <definition value="Entspricht dem Datum, an welchem dieses Ereignis befundet wurde" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Untersuchungsdatum_Verlauf &amp; Verlauf_Lokaler_Tumorstatus = R (= Lokalrezidiv)" />
+        <comment value="Untersuchungsdatum_Verlauf" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:43:3" />
+        <comment value="urn:dktk:dataelement:43:3" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <short value="Lokales bzw. regionäres Rezidiv" />
+      <definition value="Beurteilung der Situation im Primärtumorbereich" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/VerlaufLokalerTumorstatusVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Verlauf:Verlauf_Lokaler_Tumorstatus" />
+        <comment value="Verlauf:Verlauf_Lokaler_Tumorstatus" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:72:2" />
+        <comment value="urn:dktk:dataelement:72:2" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x].coding.code">
+      <path value="Observation.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    </differential>
+</StructureDefinition>

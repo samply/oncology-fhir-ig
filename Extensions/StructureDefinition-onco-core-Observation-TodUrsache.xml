@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TodUrsache" />
+  <version value="0.9.0" />
+  <name value="TodUrsache" />
+  <title value="Tod Ursache" />
+  <status value="active" />
+  <description value="Tod Ursache" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="Todesursache" />
+      <definition value="Todesursachen und Krebs-Tod-Relation" />
+    </element>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category.coding.system">
+      <path value="Observation.category.coding.system" />
+      <fixedUri value="http://hl7.org/fhir/observation-category" />
+    </element>
+    <element id="Observation.category.coding.code">
+      <path value="Observation.category.coding.code" />
+      <fixedCode value="laboratory" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="68343-3" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x].coding">
+      <path value="Observation.value[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x].coding:icd-10-gm">
+      <path value="Observation.value[x].coding" />
+      <sliceName value="icd-10-gm" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x].coding:icd-10-gm.system">
+      <path value="Observation.value[x].coding.system" />
+      <short value="ICD-10-GM" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/icd-10-gm" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x].coding:icd-10-gm.code">
+      <path value="Observation.value[x].coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Tod:Todesursachen_ICD" />
+        <comment value="Tod:Todesursachen_ICD" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:105:1" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x].coding:todTumorbedingt">
+      <path value="Observation.value[x].coding" />
+      <sliceName value="todTumorbedingt" />
+      <short value="Tod Tumor bedingt" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/JNUVS" />
+      </binding>
+    </element>
+    <element id="Observation.value[x].coding:todTumorbedingt.system">
+      <path value="Observation.value[x].coding.system" />
+      <short value="todTumorbedingt" />
+      <min value="1" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/JNUCS" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x].coding:todTumorbedingt.code">
+      <path value="Observation.value[x].coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Tod:Tod_tumorbedingt" />
+        <comment value="Tod:Tod_tumorbedingt" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:104:1" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

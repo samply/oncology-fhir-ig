@@ -9,9 +9,9 @@
             <p>Perineuralinvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM.</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMPnKategorie"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMPnKategorieCS"/>
     <version value="1.0.0" />
-    <name value="TNMPnKategorie"/>
+    <name value="TNMPnKategorieCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>

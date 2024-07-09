@@ -9,9 +9,9 @@
             <p>Zielgebietschlüssel nach oBDS 2021</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/Zielgebiet"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/ZielgebietCS"/>
     <version value="1.0.0"/>
-    <name value="Zielgebiet"/>
+    <name value="ZielgebietCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>

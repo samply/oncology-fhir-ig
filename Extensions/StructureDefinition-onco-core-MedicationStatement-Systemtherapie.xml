@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-MedicationStatement-Systemtherapie" />
+  <version value="0.9.0" />
+  <name value="Systemtherapie" />
+  <status value="active" />
+  <description value="Umfasst die Chemotherapie und alle Therapiearten, die nicht unter OP-Daten oder Strahlentherapie fällt" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationStatement.extension:StellungZurOp">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="StellungZurOp" />
+      <short value="Systemische Therapie Stellung zu operativer Therapie" />
+      <definition value="Gibt an, in welchem Bezug zu einer operativen Therapie die systemische Therapie steht" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-StellungZurOp" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="SYST:SYST_Stellung_OP" />
+        <comment value="SYST:SYST_Stellung_OP" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:70:3" />
+        <comment value="urn:dktk:dataelement:70:3" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.extension:StellungZurOp.value[x]">
+      <path value="MedicationStatement.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.extension:StellungZurOp.value[x].coding.code">
+      <path value="MedicationStatement.extension.value[x].coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.extension:Intention">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="Intention" />
+      <short value="Intention systemische Therapie" />
+      <definition value="Gibt die Intention der systemischen Therapie an" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntention" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="SYST:SYST_Intention" />
+        <comment value="SYST:SYST_Intention" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:69:2" />
+        <comment value="urn:dktk:dataelement:69:2" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.extension:Intention.value[x]">
+      <path value="MedicationStatement.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.extension:LokaleResidualstatus">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="LokaleResidualstatus" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-LokaleResidualstatus" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT" />
+        <map value="/Residualstatus_Typ/Lokale_Beurteilung_Residualstatus" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.extension:LokaleResidualstatus.value[x]">
+      <path value="MedicationStatement.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.extension:LokaleResidualstatus.value[x]:valueReference">
+      <path value="MedicationStatement.extension.value[x]" />
+      <sliceName value="valueReference" />
+    </element>
+    <element id="MedicationStatement.extension:LokaleResidualstatus.value[x]:valueReference.reference">
+      <path value="MedicationStatement.extension.value[x].reference" />
+      <min value="1" />
+    </element>
+    <element id="MedicationStatement.extension:GesamtbeurteilungResidualstatus">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="GesamtbeurteilungResidualstatus" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-GesamtbeurteilungResidualstatus" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT" />
+        <map value="/Residualstatus_Typ/Gesamtbeurteilung_Residualstatus" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.extension:GesamtbeurteilungResidualstatus.value[x]">
+      <path value="MedicationStatement.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.extension:GesamtbeurteilungResidualstatus.value[x]:valueReference">
+      <path value="MedicationStatement.extension.value[x]" />
+      <sliceName value="valueReference" />
+    </element>
+    <element id="MedicationStatement.extension:GesamtbeurteilungResidualstatus.value[x]:valueReference.reference">
+      <path value="MedicationStatement.extension.value[x].reference" />
+      <min value="1" />
+    </element>
+    <element id="MedicationStatement.extension:Protokoll">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="Protokoll" />
+      <short value="Systemische Therapie Protokoll" />
+      <definition value="Gibt an, nach welchem Protokoll die Systemtherapie durchgeführt wurde" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SystemischeTherapieProtokoll" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="SYST:SYST_Protokoll" />
+        <comment value="SYST:SYST_Protokoll" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:89:1" />
+        <comment value="urn:adt:dataelement:89:1" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.extension:Protokoll.value[x]">
+      <path value="MedicationStatement.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.status">
+      <path value="MedicationStatement.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.category">
+      <path value="MedicationStatement.category" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SYSTTherapieartVS" />
+      </binding>
+    </element>
+    <element id="MedicationStatement.category.coding">
+      <path value="MedicationStatement.category.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="MedicationStatement.category.coding.code">
+      <path value="MedicationStatement.category.coding.code" />
+      <short value="Therapieart" />
+      <definition value="OP, Strahlentherapie, Chemotherapie, Immuntherapie, Hormontherapie und Knochenmarktransplantation, Freitextangaben, wenn andere Therapiearten angewendet wurden" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="SYST:SYST_Therapieart" />
+        <comment value="SYST:SYST_Therapieart" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:36:2, urn:dktk:dataelement:38:2, urn:dktk:dataelement:39:2, urn:dktk:dataelement:40:2, urn:dktk:dataelement:41:3, urn:dktk:dataelement:71:2" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medication[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding">
+      <path value="MedicationStatement.medication[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding:ATC">
+      <path value="MedicationStatement.medication[x].coding" />
+      <sliceName value="ATC" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding:ATC.system">
+      <path value="MedicationStatement.medication[x].coding.system" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/atc" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding:ATC.version">
+      <path value="MedicationStatement.medication[x].coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].coding:ATC.code">
+      <path value="MedicationStatement.medication[x].coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].text">
+      <path value="MedicationStatement.medication[x].text" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="SYST:Substanz:SYST_Substanz" />
+        <comment value="SYST:Substanz:SYST_Substanz" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:91:1" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.subject.reference">
+      <path value="MedicationStatement.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.context">
+      <path value="MedicationStatement.context" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
+      </type>
+      <mustSupport value="false" />
+    </element>
+    <element id="MedicationStatement.context.reference">
+      <path value="MedicationStatement.context.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.effective[x]">
+      <path value="MedicationStatement.effective[x]" />
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.effective[x].start">
+      <path value="MedicationStatement.effective[x].start" />
+      <short value="Systemische Therapie Beginn" />
+      <definition value="Gibt an, wann die Systemische Therapie begonnen wurde" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="SYST:SYST_Beginn_Datum" />
+        <comment value="SYST:SYST_Beginn_Datum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:90:1" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.effective[x].end">
+      <path value="MedicationStatement.effective[x].end" />
+      <short value="Systemische Therapie Ende" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="SYST:SYST_Ende_Datum" />
+        <comment value="SYST:SYST_Ende_Datum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:93:1" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.reasonReference">
+      <path value="MedicationStatement.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

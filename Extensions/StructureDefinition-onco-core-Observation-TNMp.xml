@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMp" />
+  <version value="0.9.0" />
+  <name value="TNMp" />
+  <status value="active" />
+  <description value="Staging von Tumorerkrankungen nach der TNM-Klassifikation (pathologisch) gemäß der aktuellen Ausgabe  AJCC" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category.coding.system">
+      <path value="Observation.category.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/observation-category" />
+    </element>
+    <element id="Observation.category.coding.code">
+      <path value="Observation.category.coding.code" />
+      <min value="1" />
+      <fixedCode value="laboratory" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="21902-2" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.focus">
+      <path value="Observation.focus" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.encounter">
+      <path value="Observation.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <short value="Datum der TNM-Dokumentation/Datum Befund" />
+      <definition value="Es handelt sich sinngemäß um das Datum, an welchem der Datensatz zum TNM angelegt wurde und welches auch als auswertungsrelevant anzusehen ist. Es ist i.d.R. mit dem Diagnosedatum identisch bzw. liegt nah zu diesem Datum." />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM_Datum" />
+        <comment value="TNM:TNM_Datum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:2:3" />
+        <comment value="urn:dktk:dataelement:2:3" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="Gibt das Stadium des Tumors (nach &quot;Union internationale contre le cancer&quot;) an" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/UiccstadiumVS" />
+      </binding>
+    </element>
+    <element id="Observation.value[x].coding.version">
+      <path value="Observation.value[x].coding.version" />
+      <short value="TNM-Version" />
+      <definition value="Katalogversion des TNM" />
+      <min value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Katalogversion des TNM" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMVersionVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM_Version" />
+        <comment value="TNM:TNM_Version" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:18:2" />
+        <comment value="urn:dktk:dataelement:18:2" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x].coding.code">
+      <path value="Observation.value[x].coding.code" />
+      <short value="UICC Stadium" />
+      <definition value="Gibt das Stadium des Tumors (nach &quot;Union internationale contre le cancer&quot;) an" />
+      <min value="1" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM.TNM_T, TNM.TNM_N,  TNM.TNM_M" />
+        <comment value="Berechnet aus 3 TNM Elementen" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:89:1" />
+        <comment value="urn:dktk:dataelement:89:1" />
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing id="394">
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:TNM-T">
+      <path value="Observation.component" />
+      <sliceName value="TNM-T" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-T.extension">
+      <path value="Observation.component.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:TNM-T.extension:TNM-cpu-Praefix">
+      <path value="Observation.component.extension" />
+      <sliceName value="TNM-cpu-Praefix" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix" />
+      </type>
+    </element>
+    <element id="Observation.component:TNM-T.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-T.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="21899-0" />
+    </element>
+    <element id="Observation.component:TNM-T.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-T" />
+      <definition value="Gibt die Ausdehnung (Ort und Größe) des Primärtumors an" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="TNM-T" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMTVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM_T" />
+        <comment value="TNM:TNM_T" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:100:1" />
+        <comment value="urn:dktk:dataelement:100:1" />
+      </mapping>
+    </element>
+    <element id="Observation.component:TNM-N">
+      <path value="Observation.component" />
+      <sliceName value="TNM-N" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-N.extension">
+      <path value="Observation.component.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:TNM-N.extension:TNM-cpu-Praefix">
+      <path value="Observation.component.extension" />
+      <sliceName value="TNM-cpu-Praefix" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix" />
+      </type>
+    </element>
+    <element id="Observation.component:TNM-N.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-N.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="21900-6" />
+    </element>
+    <element id="Observation.component:TNM-N.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-N" />
+      <definition value="Gibt an, ob Lymphknoten befallen sind" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="TNM-N" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMNVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM_N" />
+        <comment value="TNM:TNM_N" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:101:1" />
+        <comment value="urn:dktk:dataelement:101:1" />
+      </mapping>
+    </element>
+    <element id="Observation.component:TNM-M">
+      <path value="Observation.component" />
+      <sliceName value="TNM-M" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-M.extension">
+      <path value="Observation.component.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:TNM-M.extension:TNM-cpu-Praefix">
+      <path value="Observation.component.extension" />
+      <sliceName value="TNM-cpu-Praefix" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-M.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-M.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="21901-4" />
+    </element>
+    <element id="Observation.component:TNM-M.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-M" />
+      <definition value="Gibt an, ob Metastasen vorliegen" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="TNM-M" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMMVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM_M" />
+        <comment value="TNM:TNM_M" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:99:1" />
+        <comment value="urn:dktk:dataelement:99:1" />
+      </mapping>
+    </element>
+    <element id="Observation.component:TNM-y-Symbol">
+      <path value="Observation.component" />
+      <sliceName value="TNM-y-Symbol" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-y-Symbol.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-y-Symbol.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="59479-6" />
+    </element>
+    <element id="Observation.component:TNM-y-Symbol.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-y-Symbol" />
+      <definition value="Gibt an, wann im Fall multimodaler Therapien mit vielfältigen Behandlungsansätzen die Klassifikation während oder nach diesen Therapien erfolgte" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM y-Symbol" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMySymbolVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM_y_Symbol" />
+        <comment value="TNM:TNM_y_Symbol" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:82:1" />
+      </mapping>
+    </element>
+    <element id="Observation.component:TNM-y-Symbol.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component:TNM-r-Symbol">
+      <path value="Observation.component" />
+      <sliceName value="TNM-r-Symbol" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-r-Symbol.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-r-Symbol.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="21983-2" />
+    </element>
+    <element id="Observation.component:TNM-r-Symbol.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-r-Symbol" />
+      <definition value="Gibt an, ob es sich bei dem Tumor um ein beurteiltes Rezidiv handelt" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM r-Symbol" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMrSymbolVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM_r_Symbol" />
+        <comment value="TNM:TNM_r_Symbol" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:81:1" />
+      </mapping>
+    </element>
+    <element id="Observation.component:TNM-r-Symbol.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component:TNM-m-Symbol">
+      <path value="Observation.component" />
+      <sliceName value="TNM-m-Symbol" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-m-Symbol.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-m-Symbol.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="42030-7" />
+    </element>
+    <element id="Observation.component:TNM-m-Symbol.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-m-Symbol" />
+      <definition value="Gibt an, ob multiple Primärtumoren in einem Bezirk vorliegen" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM m-Symbol" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMmSymbolVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM_m_Symbol" />
+        <comment value="TNM:TNM_m_Symbol" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:10:2" />
+      </mapping>
+    </element>
+    <element id="Observation.component:TNM-m-Symbol.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    
+    
+    
+    
+    <element id="Observation.component:TNM-L-Kategorie">
+      <path value="Observation.component" />
+      <sliceName value="TNM-L-Kategorie" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-L-Kategorie.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-L-Kategorie.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="33739-4" />
+    </element>
+    <element id="Observation.component:TNM-L-Kategorie.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-L-Kategorie" />
+      <definition value="Lymphgefäßinvasion" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM-L-Kategorie" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMLKategorieVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM-L-Kategorie" />
+        <comment value="TNM:TNM-L-Kategorie" />
+      </mapping>
+      
+    </element>
+    <element id="Observation.component:TNM-L-Kategorie.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    
+    <element id="Observation.component:TNM-V-Kategorie">
+      <path value="Observation.component" />
+      <sliceName value="TNM-V-Kategorie" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-V-Kategorie.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-V-Kategorie.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="33740-2" />
+    </element>
+    <element id="Observation.component:TNM-V-Kategorie.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-V-Kategorie" />
+      <definition value="Veneninvasion" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM-V-Kategorie" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMVKategorieVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM-V-Kategorie" />
+        <comment value="TNM:TNM-V-Kategorie" />
+      </mapping>
+      
+    </element>
+    <element id="Observation.component:TNM-V-Kategorie.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    
+    <element id="Observation.component:TNM-Pn-Kategorie">
+      <path value="Observation.component" />
+      <sliceName value="TNM-Pn-Kategorie" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-Pn-Kategorie.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-Pn-Kategorie.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="92837-4" />
+    </element>
+    <element id="Observation.component:TNM-Pn-Kategorie.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-Pn-Kategorie" />
+      <definition value="Perineuralinvasion" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM-Pn-Kategorie" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMPnKategorieVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM-Pn-Kategorie" />
+        <comment value="TNM:TNM-Pn-Kategorie" />
+      </mapping>
+      
+    </element>
+    <element id="Observation.component:TNM-Pn-Kategorie.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    
+    <element id="Observation.component:TNM-S-Kategorie">
+      <path value="Observation.component" />
+      <sliceName value="TNM-S-Kategorie" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:TNM-S-Kategorie.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Observation.component:TNM-S-Kategorie.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="21924-6" />
+    </element>
+    <element id="Observation.component:TNM-S-Kategorie.value[x]">
+      <path value="Observation.component.value[x]" />
+      <short value="TNM-S-Kategorie" />
+      <definition value="Serumtumormarker" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM-S-Kategorie" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMSKategorieVS" />
+      </binding>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="TNM:TNM-S-Kategorie" />
+        <comment value="TNM:TNM-S-Kategorie" />
+      </mapping>
+      
+    </element>
+    <element id="Observation.component:TNM-S-Kategorie.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    
+    
+    
+  </differential>
+</StructureDefinition>

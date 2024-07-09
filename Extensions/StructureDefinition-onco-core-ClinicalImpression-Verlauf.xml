@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-ClinicalImpression-Verlauf" />
+  <version value="0.9.0" />
+  <name value="Verlauf" />
+  <status value="active" />
+  <description value="Dient zur Erfassung der Follow-ups. Analog zum Verlauf im ADT/GEKID-Datensatz können weitere Parameter für die Entwicklung der Erkrankung (Rezidiverkrankung, Progress) erfasst werden. Dies gilt insbesondere für die TNMs und die Histologie." />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ClinicalImpression" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ClinicalImpression.status">
+      <path value="ClinicalImpression.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.subject">
+      <path value="ClinicalImpression.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.encounter">
+      <path value="ClinicalImpression.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.effective[x]">
+      <path value="ClinicalImpression.effective[x]" />
+      <short value="Untersuchungs-, Befunddatum im Verlauf" />
+      <definition value="Entspricht dem Datum, an welchem dieser Verlauf dokumentiert wurde" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Verlauf:Untersuchungsdatum_Verlauf" />
+        <comment value="Verlauf:Untersuchungsdatum_Verlauf" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:47:3, urn:dktk:dataelement:25:4, urn:dktk:dataelement:43:3, urn:dktk:dataelement:45:3" />
+      </mapping>
+    </element>
+    <element id="ClinicalImpression.previous">
+      <path value="ClinicalImpression.previous" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-ClinicalImpression-Verlauf" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.problem">
+      <path value="ClinicalImpression.problem" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.problem.reference">
+      <path value="ClinicalImpression.problem.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.finding">
+      <path value="ClinicalImpression.finding" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.finding.itemReference">
+      <path value="ClinicalImpression.finding.itemReference" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Vitalstatus" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TodUrsache" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TumorstatusLymphknoten" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokalerTumorstatus" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TumorstatusFernmetastasen" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GesamtbeurteilungTumorstatus" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Fernmetastasen" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Histologie" />
+        <targetProfile value="https://fhir.bbmri.de/StructureDefinition/Specimen" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMp" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMc" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GenetischeVariante" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Ecog" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-WeitereKlassifikation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.finding.itemReference.reference">
+      <path value="ClinicalImpression.finding.itemReference.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

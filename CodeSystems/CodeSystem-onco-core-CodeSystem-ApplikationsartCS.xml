@@ -9,9 +9,9 @@
             <p>Gibt an, mit welcher Technik die Strahlentherapie durchgeführt wird.</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/Applikationsart"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/ApplikationsartCS"/>
     <version value="1.0.0"/>
-    <name value="Applikationsart"/>
+    <name value="ApplikationsartCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>

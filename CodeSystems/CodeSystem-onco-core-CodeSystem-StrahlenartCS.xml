@@ -9,9 +9,9 @@
             <p>Photonen (ultraharte Röntgenstrahlen, inkl. Gamma-Strahler)</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/Strahlenart"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/StrahlenartCS"/>
     <version value="1.0.0"/>
-    <name value="Strahlenart"/>
+    <name value="StrahlenartCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>

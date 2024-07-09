@@ -9,9 +9,9 @@
             <p>Gibt den Grund an, warum die Strahlentherapie beendet wurde.</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/EndeGrund"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/EndeGrundCS"/>
     <version value="1.0.0"/>
-    <name value="EndeGrund"/>
+    <name value="EndeGrundCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>
