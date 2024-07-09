@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Specimen-OncoSpecimen" />
+  <version value="1.4.0" />
+  <name value="OncoSpecimen" />
+  <status value="active" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Specimen" />
+  <baseDefinition value="https://fhir.bbmri.de/StructureDefinition/Specimen" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Specimen.identifier">
+      <path value="Specimen.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.identifier:projectid">
+      <path value="Specimen.identifier" />
+      <sliceName value="projectid" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.identifier:projectid.system">
+      <path value="Specimen.identifier.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/Projects" />
+      </binding>
+    </element>
+    <element id="Specimen.status">
+      <path value="Specimen.status" />
+      <definition value="Die Verfügbarkeit der Probe" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.type.coding">
+      <path value="Specimen.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.type.coding.system">
+      <path value="Specimen.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.type.coding.code">
+      <path value="Specimen.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.subject">
+      <path value="Specimen.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.bbmri.de/StructureDefinition/Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+      </type>
+    </element>
+    <element id="Specimen.parent">
+      <path value="Specimen.parent" />
+      <short value="Mutterprobe, aus der diese Probe/Aliquot stammt" />
+      <definition value="Verweis auf die übergeordnete Mutterprobe. Der Verweis wird verwendet, wenn die aktuelle Probe z.B. ein Aliquot einer Mutterprobe ist." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.container">
+      <path value="Specimen.container" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.container.specimenQuantity">
+      <path value="Specimen.container.specimenQuantity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.container.specimenQuantity.value">
+      <path value="Specimen.container.specimenQuantity.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.container.specimenQuantity.unit">
+      <path value="Specimen.container.specimenQuantity.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.container.specimenQuantity.system">
+      <path value="Specimen.container.specimenQuantity.system" />
+      <fixedUri value="http://unitsofmeasure.org" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

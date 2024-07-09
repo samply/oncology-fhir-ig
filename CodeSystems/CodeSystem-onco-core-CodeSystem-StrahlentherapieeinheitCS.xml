@@ -9,9 +9,9 @@
             <p>Dosis in Gray</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/Strahlentherapieeinheit"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/StrahlentherapieeinheitCS"/>
     <version value="1.0.0"/>
-    <name value="Strahlentherapieeinheit"/>
+    <name value="StrahlentherapieeinheitCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>

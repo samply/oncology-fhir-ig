@@ -17,7 +17,7 @@ The FHIR® Implementation Guide and the latest release build of this project can
 This project also uses the FHIR profiles of the BBMRI project (a European research infrastructure for biobanking): [BBMRI project][4].
 ## License
 
-Copyright 2019 - 2021 The Samply Community
+Copyright 2019 - 2024 The Samply Community
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

@@ -9,9 +9,9 @@
             <p>Veneninvasion. Erfolgt im Allgemeinen im Rahmen eines pTNM.</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMVKategorie"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMVKategorieCS"/>
     <version value="1.0.0" />
-    <name value="TNMVKategorie"/>
+    <name value="TNMVKategorieCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>

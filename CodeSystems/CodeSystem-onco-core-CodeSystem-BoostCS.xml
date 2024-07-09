@@ -9,9 +9,9 @@
             <p>ja, mit Boost o. n. A.</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/Boost"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/BoostCS"/>
     <version value="1.0.0"/>
-    <name value="Boost"/>
+    <name value="BoostCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>
