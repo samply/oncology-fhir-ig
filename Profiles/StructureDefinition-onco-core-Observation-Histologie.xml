@@ -89,7 +89,7 @@
     <element id="Observation.value[x].coding">
       <path value="Observation.value[x].coding" />
       <min value="1" />
-      <max value="1" />
+      
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].coding.system">

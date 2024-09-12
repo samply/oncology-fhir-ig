@@ -43,7 +43,10 @@
         <map value="ST_Nebenwirkung; SYST_Nebenwirkung" />
         <comment value="ST_Nebenwirkung; SYST_Nebenwirkung" />
       </mapping>
-    </element>
+    <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:00:00" />
+      </mapping></element>
     <element id="AdverseEvent.event.coding.code">
       <path value="AdverseEvent.event.coding.code" />
       <short value="MedDRA- oder CTCAE-Code" />
@@ -55,7 +58,10 @@
         <map value="Nebenwirkung_Art" />
         <comment value="Nebenwirkung_Art" />
       </mapping>
-    </element>
+    <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:00:00" />
+      </mapping></element>
     <element id="AdverseEvent.event.text">
       <path value="AdverseEvent.event.text" />
       <mustSupport value="true" />
@@ -95,7 +101,10 @@
     <element id="AdverseEvent.severity.coding.code">
       <path value="AdverseEvent.severity.coding.code" />
       <mustSupport value="true" />
-    </element>
+    <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:00:00" />
+      </mapping></element>
     <element id="AdverseEvent.suspectEntity">
       <path value="AdverseEvent.suspectEntity" />
       <mustSupport value="true" />
