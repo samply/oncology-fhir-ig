@@ -7,7 +7,7 @@
         </div>
     </text>
     <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/Projects"/>
-    <version value="0.9.0" />
+    <version value="1.0.0" />
     <name value="Projects"/>
     <status value="active"/>
     <publisher value="DKTK"/>
@@ -17,7 +17,7 @@
             <value value="https://dktk.dkfz.de"/>
         </telecom>
     </contact>
-    <description value="Projecs and studies"/>
+    <description value="Projects and studies"/>
     <compose>
         <include>
             <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/Projects"/>

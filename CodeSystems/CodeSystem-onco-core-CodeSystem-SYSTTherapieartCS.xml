@@ -24,7 +24,7 @@
     <caseSensitive value="true"/>
     <compositional value="false"/>
     <content value="complete"/>
-    <count value="8"/>
+    <count value="16"/>
     <concept>
         <code value="CH"/>
         <display value="Chemotherapie"/>
@@ -70,12 +70,10 @@
         <code value="CI"/>
         <display value="Chemo- + Immun-/Antikörpertherapie"/>
     </concept>
-    
     <concept>
         <code value="CZ"/>
         <display value="Chemotherapie + zielgerichtete Substanzen"/>
     </concept>
-    
     <concept>
         <code value="CI"/>
         <display value="Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen"/>
@@ -85,12 +83,10 @@
         <code value="IZ"/>
         <display value="Immun-/Antikörpertherapie + zielgerichtete Substanzen"/>
     </concept>
-    
     <concept>
         <code value="SZ"/>
         <display value="Stammzelltransplantation (inkl. Knochenmarktransplantation)"/>
     </concept>
-    
     <concept>
         <code value="WW"/>
         <display value="Watchful Waiting"/>
