@@ -37,7 +37,7 @@
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
-      <fixedCode value="85347-3" />
+      <fixedCode value="21894-1" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />

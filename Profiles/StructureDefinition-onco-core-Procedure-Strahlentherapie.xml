@@ -65,7 +65,24 @@
         <comment value="urn:dktk:dataelement:67:2" />
       </mapping>
     </element>
-    <element id="Procedure.status">
+    <element id="Procedure.extension:Bestrahlung">
+      <path value="Procedure.extension" />
+      <sliceName value="Bestrahlung" />
+      <short value="Einzelne Bestrahlungen" />
+      <definition value="Gibt die einzelnen Bestrahlungen an" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Bestrahlung" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="ST:Bestrahlung" />
+        <comment value="ST:Bestrahlung" />
+      </mapping>
+    </element><element id="Procedure.status">
       <path value="Procedure.status" />
       <mustSupport value="true" />
     </element>
@@ -166,5 +183,27 @@
       </type>
       <mustSupport value="true" />
     </element>
-  </differential>
+  <element id="Procedure.outcome">
+      <path value="Procedure.outcome" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.outcome.coding">
+      <path value="Procedure.outcome.coding" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/EndeGrundVS" />
+      </binding>
+    </element>
+    <element id="Procedure.outcome.coding.code">
+      <path value="Procedure.outcome.coding.code" />
+      <mapping>
+        <identity value="ADT" />
+        <map value="ST.Ende_Grund" />
+        <comment value="ST.Ende_Grund" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:00:00" />
+      </mapping>
+    </element></differential>
 </StructureDefinition>

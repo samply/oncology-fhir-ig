@@ -46,7 +46,10 @@
         <map value="Tumorkonferenz:Datum" />
         <comment value="Tumorkonferenz:Datum" />
       </mapping>
-    </element>
+    <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:00:00" />
+      </mapping></element>
     <element id="CarePlan.activity">
       <path value="CarePlan.activity" />
       <mustSupport value="true" />
@@ -83,7 +86,10 @@
         <map value="Therapieempfehlung:Typ_Therapieempfehlung" />
         <comment value="Therapieempfehlung:Typ_Therapieempfehlung" />
       </mapping>
-    </element>
+    <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:00:00" />
+      </mapping></element>
     <element id="CarePlan.activity.detail.status">
       <path value="CarePlan.activity.detail.status" />
       <mustSupport value="true" />
@@ -100,13 +106,9 @@
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/JNUVS" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/JNUVS" />
       </binding>
-      <mapping>
-        <identity value="oBDS" />
-        <map value="19.2" />
-        <comment value="Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten" />
-      </mapping>
+      
     </element>
     <element id="CarePlan.activity.detail.statusReason.coding.system">
       <path value="CarePlan.activity.detail.statusReason.coding.system" />
@@ -116,6 +118,14 @@
       <path value="CarePlan.activity.detail.statusReason.coding.code" />
       <min value="1" />
       <mustSupport value="true" />
-    </element>
+    <mapping>
+        <identity value="oBDS" />
+        <map value="19.2" />
+        <comment value="Tumorkonferenz/Therapieempfehlung Therapieabweichung auf Wunsch des Patienten" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:00:00" />
+      </mapping></element>
   </differential>
 </StructureDefinition>
